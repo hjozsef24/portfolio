@@ -1,0 +1,29 @@
+.quotes {
+    &-slider {
+        h2 {
+            text-align center
+
+            +maxwidth($lg-max) {
+                text-align left
+                font-size 40px
+                line-height 48px
+            }
+        }
+    }
+
+    &-slides {
+        margin-top 32px
+
+        +maxwidth($lg-max) {
+            margin-top 24px
+        }
+
+        .slick-slide {
+            margin 0 15px
+        }
+
+        .slick-list {
+            margin 0 -15px
+        }
+    }
+}

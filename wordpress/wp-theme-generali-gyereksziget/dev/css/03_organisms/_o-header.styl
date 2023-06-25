@@ -1,0 +1,21 @@
+header {
+    background-color $red
+    padding 12px 32px 12px 29px
+    display flex
+    justify-content space-between
+
+    +maxwidth(1199px) {
+        padding 5px 16px
+    }
+
+    .nav-icon {
+        &__wrapper {
+            display block
+            margin auto 0
+
+            +minwidth(1200px) {
+                display none
+            }
+        }
+    }
+}

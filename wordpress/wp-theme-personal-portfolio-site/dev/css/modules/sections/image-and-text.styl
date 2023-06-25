@@ -1,0 +1,36 @@
+.image-and-text {
+    &--text__wrapper {
+        padding-right 90px
+        margin auto 0
+
+        +for_breakpoint(tablet) {
+            padding-right 15px
+            text-align center
+        }
+
+        h1, h2, h3 {
+            margin-bottom 25px
+        }
+    }
+
+    &--image__wrapper {
+        img {
+            width 385px
+            height 445px
+            object-fit cover
+            object-position center
+
+            +for_breakpoint(tablet) {
+                display block
+                margin 25px auto
+                width 325px
+                height 375px
+            }
+
+            +for_breakpoint(mobile) {
+                width 275px
+                height 325px
+            }
+        }
+    }
+}

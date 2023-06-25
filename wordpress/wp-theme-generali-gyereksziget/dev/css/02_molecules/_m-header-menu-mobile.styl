@@ -1,0 +1,58 @@
+.header-menu--mobile.header-menu--mobile {
+    position absolute
+    right 0
+    top 68px
+    background-color $white
+    padding 32px 24px 24px
+    width 310px
+    z-index 9999
+    max-height calc(100vh - 68px)
+    height 100%
+    transform translateX(100%)
+    transition transform .3s ease-in-out
+
+    +minwidth(1200px) {
+        display none
+    }
+
+    &.is-active {
+        transform translateX(0)
+    }
+
+    .header-menu {
+        display block
+
+        .nav-link:not(.dropdown-item) {
+            color $red
+            margin-top 24px
+            font-weight 700
+            font-size 24px
+            line-height 32px
+            display block
+        }
+    }
+
+    .header--secondary-nav {
+        display block
+
+        &:before {
+            content ''
+            display block
+            position absolute
+            width 100%
+            height 2px
+            background-color $transparent-grey
+        }
+    }
+
+    .nav-icon {
+        &__wrapper {
+            display block
+            margin auto 0
+        }
+    }
+
+    .menu-fejlec-menu-container {
+        display block
+    }
+}

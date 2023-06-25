@@ -1,0 +1,119 @@
+.error404 {
+    .not-found {
+        background url('../img/blue-purple-gradient-background.png')
+        margin-bottom -55px
+        padding-top 65px
+
+        +maxwidth($lg-max) {
+            padding-top 0
+        }
+
+        .content__wrapper {
+            background-image url('../img/svg/not_found.svg')
+            background-position center
+            background-repeat no-repeat
+            min-height 550px
+            margin 20px
+            position relative
+            display flex
+            flex-direction column
+            justify-content space-between
+
+            .text__wrapper {
+                width 368px
+                margin auto auto 0
+
+                +maxwidth(676px) {
+                    margin auto auto 10px
+                }
+
+                +maxwidth(399px) {
+                    width unset
+                }
+
+                .title {
+                    color $white
+                    font-family $open-sans
+                    font-weight 700
+                    font-size 24px
+                    line-height 32px
+                    text-align center
+                    margin -4px 0 8px
+                }
+
+                .text {
+                    color $white
+                    font-family $open-sans
+                    font-weight 400
+                    font-size 14px
+                    line-height 20px
+                    text-align center
+                }
+
+                .buttons__wrapper {
+                    display flex
+                    justify-content center
+                    gap 16px
+                    margin 16px 0 40px
+
+                    .btn--centered {
+                        margin 0
+                        min-width unset
+                    }
+                }
+            }
+
+            +maxwidth(1499px) {
+                margin 0
+            }
+
+            +maxwidth(676px) {
+                background-image url('../img/svg/not_found_mobile.svg')
+                background-size cover
+                background-position center 25px
+                margin 0
+                min-height 855px
+            }
+
+            +maxwidth(545px) {
+                background-size cover
+                background-position center 25px
+                margin 0
+                min-height 750px
+            }
+
+            +maxwidth(479px) {
+                background-size cover
+                background-position center 25px
+                margin 0
+                min-height 700px
+            }
+
+            +maxwidth(399px) {
+                background-position bottom
+                margin 0
+                min-height 580px
+                width 100vw
+            }
+        }
+
+        .container-fluid, .row, .col-12 {
+            --bs-gutter-x 0
+        }
+    }
+
+    .sponsors, .footer--mobile-decor {
+        display none
+    }
+
+    footer {
+        background-image url('../img/svg/footer-not-found.svg')
+        margin-top 0
+        padding 120px 0 56px
+        position relative
+
+        +maxwidth(1499px) {
+            margin-top 15px
+        }
+    }
+}

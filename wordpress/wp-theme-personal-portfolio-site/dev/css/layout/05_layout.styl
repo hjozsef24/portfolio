@@ -1,0 +1,70 @@
+* {
+	outline 0 !important
+}
+
+html, body {
+	overflow-x hidden
+}
+
+.bg-black-blue {
+	{blue-black-gradient}
+}
+
+.bg-black-grey {
+	{grey-black-gradient}
+}
+
+@media all and (min-width 1199px) {
+	::-webkit-scrollbar {
+		width 8px
+		height 4px
+	}
+
+	::-webkit-scrollbar-track-piece {
+		background-color $grey
+	}
+
+	::-webkit-scrollbar-thumb:vertical {
+		{black-blue-gradient}
+	}
+}
+
+.pad-150-100 {
+	padding 150px 0 100px
+}
+
+.pad-100-190 {
+	padding 100px 0 190px
+
+	+for_breakpoint(tablet) {
+		padding 85px 0 150px
+	}
+
+	+for_breakpoint(mobile) {
+		padding 50px 0 150px
+	}
+}
+
+.pad-150-190 {
+	padding 150px 0 190px
+
+	+for_breakpoint(tablet) {
+		padding 85px 0 150px
+	}
+
+	+for_breakpoint(mobile) {
+		padding 50px 0 150px
+	}
+}
+
+.pad-175-100 {
+	padding 175px 0 100px
+
+	+for_breakpoint(tablet) {
+		padding 125px 0 25px
+	}
+}
+
+p {
+	margin-bottom 0
+}

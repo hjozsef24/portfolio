@@ -1,0 +1,37 @@
+.tab {
+    &--image-title {
+        font-family $open-sans
+        font-style normal
+        font-weight 400
+        font-size 24px
+        line-height 32px
+        color $purple
+
+        strong {
+            font-size 24px
+            line-height 32px
+        }
+    }
+
+    &--image {
+        width 100%
+        max-width 676px
+        object-fit cover
+        object-position center
+        margin-top 16px
+
+        +maxwidth($xxl-max){
+            margin 16px 0
+        }
+    }
+
+    &--text {
+        color $purple
+        font-family $open-sans
+        line-height 28px
+
+        img{
+            margin-top 10px
+        }
+    }
+}

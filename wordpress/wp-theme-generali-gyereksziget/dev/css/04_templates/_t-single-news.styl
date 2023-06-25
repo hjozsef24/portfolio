@@ -1,0 +1,50 @@
+.single-news-cpt.single-news-cpt {
+    p:not(.header-logo--text) {
+        color $purple
+    }
+
+    .related_news {
+        position relative
+        padding-bottom 175px
+        margin-top 25px
+        padding-top 25px
+        background-image url('../img/highlighted-programs-background.png')
+        background-size cover
+        background-position center
+
+        +maxwidth($md-max) {
+            background-image url('../img/highlighted-programs-background-mobile.png')
+            background-position top center
+        }
+
+        &__title {
+            position relative
+            z-index 9
+            padding-top 125px
+            padding-bottom 40px
+            color $pink
+            text-align center
+
+            +maxwidth($md-max) {
+                padding-top 80px
+                padding-bottom 0
+                font-size 40px
+                line-height 48px
+                text-align left
+            }
+        }
+    }
+
+    .share {
+        z-index 99
+        position relative
+    }
+
+    .slick-slide {
+        margin 0 8px
+    }
+
+    .slick-list {
+        margin 0 -8px
+    }
+}

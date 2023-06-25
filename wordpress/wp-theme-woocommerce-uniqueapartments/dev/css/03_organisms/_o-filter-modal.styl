@@ -1,0 +1,50 @@
+.filter-modal {
+    +maxwidth($md-max) {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        max-height: 0;
+        visibility: hidden;
+        opacity: 0;
+        z-index: 99999;
+        width: 100%;
+        padding: 24px 16px 40px 16px;
+        background-color: $white;
+        border-radius: 32px 32px 0px 0px;
+        transition: max-height 0.3s ease-in-out;
+
+        &.is-active {
+            max-height: 750px;
+            visibility: visible;
+            overflow-y: scroll;
+            opacity: 1;
+        }
+    }
+
+    &--header {
+        +minwidth($md-min) {
+            display: none;
+        }
+
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 16px;
+    }
+
+    .filter-form {
+        .reset-filter {
+            +maxwidth($md-max) {
+                display: none;
+            }
+        }
+    }
+}
+
+.toggle-filter-modal {
+    +minwidth($md-min) {
+        display: none;
+    }
+
+    display: flex;
+}

@@ -1,0 +1,113 @@
+.footer {
+    &--follow-us-text {
+        color: $white;
+        margin-top: 32px;
+        font-family: $headline-black;
+        font-size: 20px;
+        line-height: 24px;
+        margin-bottom: 8px;
+
+        +maxwidth($sm-max) {
+            font-size: 16px;
+            line-height: 24px;
+        }
+    }
+
+    &--social-icon {
+        width: 60px;
+        height: 60px;
+        object-fit: contain;
+        object-position: center;
+    }
+
+    &--copyright-text {
+        color: $white;
+        font-size: 14px;
+        line-height: 20px;
+        font-family: $paragraph-bold;
+
+        +maxwidth($xl-max) {
+            font-size: 12px;
+            line-height: 16px;
+        }
+    }
+
+    &-menu {
+        ul, li {
+            list-style: none;
+        }
+
+        li {
+            font-size: 16px;
+            line-height: 24px;
+            font-family: $paragraph-bold;
+            display: flex;
+            margin-bottom: 16px;
+
+            +maxwidth($xl-max) {
+                font-size: 14px;
+                line-height: 20px;
+            }
+
+            +maxwidth($sm-max) {
+                font-size: 16px;
+                line-height: 24px;
+            }
+
+            a {
+                color: $white;
+            }
+        }
+    }
+
+    &-submenu {
+        ul, li {
+            list-style: none;
+        }
+
+        li {
+            font-size: 14px;
+            line-height: 20px;
+            font-family: $paragraph-bold;
+            display: flex;
+
+            &:before {
+                content: '';
+                display: inline-block;
+                height: 100%;
+                width: 2px;
+                background-color: $white;
+                margin: 0 48px;
+
+                +maxwidth($xl-max) {
+                    margin: 0 20px;
+                }
+
+                +maxwidth($sm-max) {
+                    content: unset;
+                }
+            }
+
+            +maxwidth($xl-max) {
+                font-size: 12px;
+                line-height: 16px;
+            }
+
+            +maxwidth($sm-max) {
+                margin: 0 10px 8px 10px;
+            }
+
+            a {
+                color: $white;
+            }
+        }
+
+        li:last-of-type {
+            margin-left: 48px;
+
+            +maxwidth($xl-max) {
+                margin-left: 0;
+            }
+        }
+    }
+}

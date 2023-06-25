@@ -1,0 +1,25 @@
+.programs {
+    position relative
+    overflow hidden
+    margin-top -65px
+    padding 105px 0 200px
+
+    .custom-container-spacing {
+        +maxwidth($lg-max) {
+            --bs-gutter-x 16px
+        }
+    }
+
+    &:before {
+        content ''
+        background-image url('../img/blue-purple-gradient-background.png')
+        background-size cover
+        top 0
+        left 0
+        right 0
+        bottom 0
+        position absolute
+        transform scaleY(-1)
+        z-index -1
+    }
+}

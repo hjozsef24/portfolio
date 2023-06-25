@@ -1,0 +1,86 @@
+.footer--navigation__wrapper {
+    display flex
+    justify-content space-between
+    margin-top 130px
+
+    +maxwidth($xl-max) {
+        background-color $text-blue
+        margin-top 32px
+        padding 18px 86px
+    }
+
+    +maxwidth($sm-max) {
+        padding 32px 16px
+    }
+
+    .menu-lablec-menu-container {
+        +maxwidth($xl-max) {
+            margin auto 0
+            display block
+        }
+    }
+
+    .footer-menu {
+        columns 2
+        column-gap 56px
+        max-width 274px
+
+        +maxwidth($xl-max) {
+            columns unset
+            column-gap unset
+            max-width 100%
+            width 100%
+            display flex
+            flex-wrap wrap
+            column-gap 32px
+        }
+
+        .menu-item {
+            margin-bottom 16px
+
+            +maxwidth($xl-max) {
+                margin-bottom 0
+            }
+
+            .nav-link {
+                font-family $open-sans
+                color $white
+                text-decoration none
+                font-weight 700
+                font-size 18px
+                line-height 24px
+
+                +maxwidth($xl-max) {
+                    font-size 14px
+                    line-height 20px
+                    text-decoration underline
+                    margin-bottom 0
+                }
+
+                +maxwidth($md-max) {
+                    font-weight 400
+                    font-size 12px
+                    line-height 16px
+                    text-decoration underline
+                    margin-bottom 0
+                }
+            }
+        }
+    }
+
+    .footer-socials__wrapper {
+        display flex
+        gap 16px
+        height 24px
+
+        +maxwidth($sm-max) {
+            display none
+        }
+
+        a {
+            display block
+            margin auto 0
+            text-decoration none
+        }
+    }
+}

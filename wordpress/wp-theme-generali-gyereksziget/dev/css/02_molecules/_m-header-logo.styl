@@ -1,0 +1,31 @@
+.header {
+    &-logo {
+        width 115px
+        height 55px
+        object-fit contain
+        object-position center
+
+        &__wrapper {
+            display flex
+
+            .header-logo--text {
+                color $white
+                font-family $luckiest
+                font-weight 400
+                font-size 16px
+                line-height 24px
+                letter-spacing: 0.5px;
+                max-width 148px
+
+                &__wrapper {
+                    display block
+                    margin auto 0 auto 14px
+
+                    +maxwidth(1199px){
+                        display none
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,89 @@
+.map-location {
+    position relative
+    cursor pointer
+}
+
+.map-infobox {
+    position absolute
+    transform translateY(-40%)
+    min-width 250px
+}
+
+.map-zoom-button {
+    background-color $white
+    border-radius 8px
+    width 40px
+    height 40px
+    padding-top 12px
+    cursor pointer
+
+    &:first-of-type {
+        margin-bottom 16px
+    }
+
+    img {
+        display block
+        margin auto
+    }
+}
+
+.map--search__wrapper {
+    display block
+    margin-right 16px
+    margin-bottom 32px
+
+    +maxwidth(1200px) {
+        display flex
+        justify-content space-between
+        margin-right 0
+    }
+
+    .toggle-primary-map-filter {
+        display none
+
+        +between(576px, 1200px) {
+            display block
+            margin auto -10px auto 0
+            transition transform .3s ease-in-out
+
+            &.active {
+                transform rotate(180deg)
+            }
+        }
+    }
+
+    form {
+        width 100%
+
+        input {
+            +between(576px, 1200px) {
+                width 260px !important
+                padding-right 15px !important
+            }
+
+            +maxwidth(575px) {
+                display none
+            }
+        }
+    }
+}
+
+.map--mobile-filters-button__wrapper {
+    bottom 105px
+    left 0
+    right 0
+    position absolute
+    z-index 9999
+
+    .program-filter--modal-button {
+        position relative
+        bottom unset
+        margin 0 4px
+    }
+}
+
+.map {
+    .filtered-programs-counter {
+        display none
+    }
+}

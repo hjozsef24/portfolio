@@ -1,0 +1,106 @@
+.btn, button, .single_add_to_cart_button.single_add_to_cart_button.single_add_to_cart_button, .woocommerce table.my_account_orders .button {
+    display: block;
+    border-radius: 100px;
+    padding: 16px 24px;
+    font-size: 16px;
+    line-height: 24px;
+    user-select: none;
+    border-style: inset;
+    border: none;
+    width: fit-content;
+    font-family: $headline-bold;
+    cursor: pointer;
+
+    &:disabled, &[disabled] {
+        opacity: 0.5;
+        cursor: normal;
+        pointer-events: none;
+    }
+
+    +maxwidth($lg-max) {
+        font-size: 14px;
+        padding: 13px 24px;
+    }
+}
+
+.btn--primary, .single_add_to_cart_button.single_add_to_cart_button.single_add_to_cart_button, .woocommerce table.my_account_orders .button {
+    color: $white !important;
+    background-color: $primary !important;
+    border: 2px solid $primary !important;
+}
+
+.btn--secondary {
+    color: $primary;
+    background-color: $white;
+    border: 2px solid $primary;
+}
+
+.btn--centered {
+    margin: 32px auto 0 auto;
+    display: block;
+    width: fit-content;
+}
+
+.btn--instagram {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+
+    &:before {
+        content: url('../img/svg/icon-instagram-white.svg');
+        display: block;
+        margin: auto 0;
+        width: 24px;
+        height: 24px;
+    }
+}
+
+.btn--search {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+
+    &:before {
+        content: url('../img/svg/icon-search-white.svg');
+        display: block;
+        margin: auto 0;
+        width: 24px;
+        height: 24px;
+    }
+}
+
+.btn--filter {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+
+    &:before {
+        content: '';
+        background-image: url('../img/svg/icon-filter.svg');
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+        display: block;
+        margin: auto 0;
+        width: 24px;
+        height: 24px;
+    }
+}
+
+.single_add_to_cart_button {
+    padding: 16px 24px !important;
+    text-transform: uppercase;
+
+    +maxwidth($xl-max) {
+        padding: 13px 24px !important;
+    }
+}
+
+.woocommerce table.my_account_orders .button {
+    text-align: center;
+    padding: 8px 16px !important;
+
+    +maxwidth($md-max) {
+        margin-top: 30px;
+    }
+}

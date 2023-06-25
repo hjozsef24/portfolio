@@ -1,0 +1,108 @@
+.contact {
+    .form__wrapper {
+        {blue-black-gradient}
+        padding 35px 25px 25px
+        width 450px
+        display block
+        margin 0 auto
+
+        +for_breakpoint(mobile) {
+            padding 25px 15px
+            width 100%
+        }
+
+        .form-title {
+            text-align center
+            font-size 28px
+            font-weight 500
+            margin-bottom 50px
+
+            +for_breakpoint(mobile) {
+                font-size 22px
+                margin-bottom 25px
+            }
+        }
+
+        .form-item:not(.checkbox-group):not(.form-item--button) {
+            width calc(100% - 50px)
+            display block
+            margin 0 auto 40px
+            position relative
+
+            +for_breakpoint(mobile) {
+                width 100%
+            }
+
+            .input-label:not(.textarea-input-label) {
+                pointer-events none
+                position absolute
+                bottom 0
+                left 5px
+                font-size 18px
+                transition all .3s ease-in-out
+
+                +for_breakpoint(mobile) {
+                    font-size 14px
+                    bottom 2px
+                }
+
+                &.expanded {
+                    font-size 14px
+                    bottom 30px
+                    color $lightWhite
+
+                    +for_breakpoint(mobile) {
+                        font-size 12px
+                    }
+                }
+            }
+
+            .textarea-input-label {
+                pointer-events none
+                position absolute
+                top 0
+                left 5px
+                font-size 18px
+                transition all .3s ease-in-out
+
+                +for_breakpoint(mobile) {
+                    font-size 14px
+                    bottom 2px
+                }
+
+                &.expanded {
+                    font-size 14px
+                    top -20px
+                    color $lightWhite
+
+                    +for_breakpoint(mobile) {
+                        font-size 12px
+                    }
+                }
+            }
+        }
+
+        .checkbox-group {
+            width calc(100% - 50px)
+            display block
+            margin 0 auto
+
+            +for_breakpoint(mobile) {
+                width 100%
+            }
+        }
+
+        .form-item--button button {
+            display block
+            margin 35px auto 0
+        }
+    }
+
+    &--text-row {
+        margin-bottom 75px
+
+        +for_breakpoint(mobile) {
+            margin-bottom 15px
+        }
+    }
+}

@@ -1,0 +1,33 @@
+.App {
+  text-align: center;
+}
+
+.cards__wrapper{
+  width: 600px;
+  display: block;
+  margin: auto;
+  padding: 20px;
+}
+
+.inner__wrapper{
+  display: grid;
+  justify-content: center;
+  grid-template-columns: repeat(4, 125px);
+}
+
+.card__wrapper img{
+  margin-bottom: 25px;
+}
+
+.card__wrapper.flipped .card--front{
+  display: block;
+}
+
+
+.card__wrapper.flipped .card--back{
+  display: none;
+}
+
+.card--front{
+  display: none;
+}

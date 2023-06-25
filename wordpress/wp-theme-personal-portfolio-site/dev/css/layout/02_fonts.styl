@@ -1,0 +1,66 @@
+h1, h2, h3, h4, h5, h6, p, a, span, input, label, textarea {
+    color $white
+    font-family 'Montserrat', sans-serif
+}
+
+h1 {
+    font-weight 700
+    font-size 45px
+
+    +for_breakpoint(tablet) {
+        font-size 40px
+    }
+
+    +for_breakpoint(mobile) {
+        font-size 35px
+    }
+}
+
+h2 {
+    font-weight 500
+    font-size 40px
+
+    +for_breakpoint(tablet) {
+        font-size 35px
+    }
+
+    +for_breakpoint(mobile) {
+        font-size 30px
+    }
+}
+
+h3 {
+    font-weight 500
+    font-size 35px
+
+    +for_breakpoint(tablet) {
+        font-size 30px
+    }
+
+    +for_breakpoint(mobile) {
+        font-size 25px
+    }
+}
+
+p {
+    font-weight 400
+    font-size 18px
+
+    +for_breakpoint(tablet) {
+        font-size 16px
+    }
+
+    +for_breakpoint(mobile) {
+        font-size 14px
+    }
+}
+
+a {
+    font-weight 600
+    transition color .2s ease-in-out
+
+    &:hover {
+        color $blue
+        text-decoration none
+    }
+}

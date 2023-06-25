@@ -1,0 +1,15 @@
+.filter-form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 32px;
+    justify-content: space-between;
+
+    +maxwidth($xl-max) {
+        gap: 16px;
+        justify-content: flex-start;
+    }
+
+    +maxwidth($md-max) {
+        flex-direction: column;
+    }
+}

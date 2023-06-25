@@ -1,0 +1,70 @@
+.map {
+    &--secondary-filter {
+        &--desktop {
+            display block
+
+            +maxwidth(1199px) {
+                display none !important
+            }
+        }
+
+        &--tablet {
+            display block
+
+            +minwidth(1200px) {
+                display none !important
+            }
+        }
+    }
+
+    .program-filter {
+        +maxwidth(1199px) {
+            display flex
+            justify-content space-between
+
+            > div {
+                width 50%
+                margin 0 4px
+            }
+        }
+
+        .checkbox-filter__container {
+            &.active {
+                .checkbox-filter__wrapper {
+                    max-height 300px
+                    visibility visible
+                }
+            }
+        }
+
+        .checkbox-filter__wrapper {
+            +maxwidth(1199px) {
+                display block
+                border 1px solid #D6D6D6
+                border-radius 16px
+                background-color $white
+                position absolute
+                width calc(50% - 38px)
+                max-height 0
+                visibility hidden
+            }
+
+            .checkbox-filter {
+                +maxwidth(1199px) {
+                    border 0
+                    border-radius 0
+                    background-color unset
+                    padding 4px 16px
+
+                    &:first-of-type {
+                        padding-top 8px
+                    }
+
+                    &:last-of-type {
+                        padding-bottom 8px
+                    }
+                }
+            }
+        }
+    }
+}

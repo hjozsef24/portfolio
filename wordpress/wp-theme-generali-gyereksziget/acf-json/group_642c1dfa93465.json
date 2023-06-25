@@ -1,0 +1,47 @@
+{
+    "key": "group_642c1dfa93465",
+    "title": "Helysz\u00ednek gy\u0171jt\u0151 oldal be\u00e1ll\u00edt\u00e1sai",
+    "fields": [
+        {
+            "key": "field_642c1dfa813cd",
+            "label": "Keres\u0151 mez\u0151 melletti sz\u00f6veg",
+            "name": "additional_text",
+            "aria-label": "",
+            "type": "wysiwyg",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "tabs": "all",
+            "toolbar": "full",
+            "media_upload": 0,
+            "delay": 0
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_template",
+                "operator": "==",
+                "value": "template-programs-category-places.php"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": [
+        "the_content"
+    ],
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "modified": 1681711109
+}

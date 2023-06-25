@@ -1,0 +1,39 @@
+.highlighted-programs {
+    background-image url('../img/highlighted-programs-background.png')
+    background-size cover
+    background-position center
+    padding-top 125px
+    padding-bottom 75px
+    margin-top 125px
+    position relative
+
+    +maxwidth($xxl-max) {
+        padding-bottom 185px
+    }
+
+    +maxwidth($lg-max) {
+        padding-top 125px
+    }
+
+    +maxwidth($md-max) {
+        padding-top 70px
+        background-image url('../img/highlighted-programs-background-mobile.png')
+        background-position top center
+    }
+
+    &:after {
+        content ''
+        background-image url('../img/decor/scissors-brush.svg')
+        background-size contain
+        position absolute
+        top -60px
+        right 420px
+
+        +maxwidth($xl-max) {
+            top -30px
+            right 18px
+            width 117px
+            height 124px
+        }
+    }
+}

@@ -1,0 +1,270 @@
+.single-programs-cpt {
+    background linear-gradient(180deg, rgba(255, 255, 255, .7) .07%, rgba(255, 255, 255, 0) 103.48%), url('../img/blue-purple-gradient-background.png')
+
+    .hero__text {
+        color $white
+        font-family $luckiest
+        font-style normal
+        font-weight 400
+        font-size 64px
+        line-height 72px
+
+        +maxwidth($lg-max) {
+            font-size 40px
+            line-height 48px
+            text-align center
+        }
+
+        +between($md-max, $lg-max) {
+            text-align left
+            margin-left 86px
+        }
+    }
+
+    .related-programs {
+        margin-top 80px
+        margin-bottom 150px
+        position relative
+        z-index 10
+
+        &:before {
+            content ''
+            background-image url('../img/decor/scissors-brush.svg')
+            background-size contain
+            background-repeat no-repeat
+            position absolute
+            top -75px
+            right 21%
+            width 120px
+            height 128px
+
+            +maxwidth($xl-max) {
+                top -60px
+                right 50px
+                width 120px
+                height 128px
+            }
+
+            +maxwidth($xl-max) {
+                right 10px
+            }
+
+            +maxwidth($xs-max) {
+                width 100px
+                height 110px
+            }
+        }
+
+        &--title {
+            margin-bottom 40px
+            text-align center
+            color $pink
+
+            +maxwidth($xl-max) {
+                text-align left
+            }
+
+            +maxwidth($sm-max) {
+                max-width 240px
+            }
+        }
+
+        .program-card {
+            border 1px solid $light-grey
+            border-radius 16px
+        }
+    }
+
+    .taxonomy__wrapper {
+        gap 16px
+        display flex
+        margin-top 26px
+        margin-bottom 30px
+
+        +maxwidth($xl-max) {
+            margin-bottom 0
+            width 85%
+        }
+
+        +maxwidth($lg-max) {
+            margin-top 0
+            flex-wrap wrap
+        }
+
+        .badge {
+            display flex
+            background #FFFFFF
+            border 2px solid $text-blue
+            border-radius 20px
+            padding 4px 16px 4px 8px
+            margin 12px 0
+
+            +maxwidth($lg-max) {
+                margin 0
+            }
+
+            img {
+                margin-right 8px
+            }
+
+            p {
+                font-family $open-sans
+                color $text-blue
+                font-style normal
+                font-weight 400
+                font-size 14px
+                line-height 28px
+                cursor default
+            }
+        }
+    }
+
+    .icons__wrapper {
+        height 24px
+        margin-top 30px
+
+        .social-media {
+            display flex
+            gap 16px
+
+            +maxwidth($lg-max) {
+                display none
+            }
+
+            a {
+                img {
+                    display block
+                    margin 16px auto
+                    width auto
+                    max-width 24px
+                    height 24px
+                }
+            }
+        }
+    }
+
+    .additional-info__wrapper {
+        display block
+
+        +maxwidth($lg-max) {
+            margin-top 16px
+            position absolute
+            top 0
+        }
+
+        +maxwidth($md-max) {
+            left 16px
+        }
+
+        .badge {
+            display flex
+            margin-bottom 16px
+
+            p {
+                color $purple
+                font-family $open-sans
+                font-style normal
+                font-weight 700
+                font-size 14px
+                line-height 24px
+                margin-left 10px
+            }
+        }
+
+        .badge:first-of-type {
+            p {
+                color $text-blue
+                margin-left 15px
+            }
+        }
+    }
+
+    .description__wrapper {
+        margin-top 42px
+
+        +maxwidth($lg-max) {
+            margin-top 12px
+        }
+
+        p {
+            font-family $open-sans
+            font-style normal
+            font-weight 400
+            font-size 16px
+            line-height 24px
+            color $purple
+        }
+    }
+
+    .single-program {
+        position relative
+        z-index 9
+
+        &:before {
+            content url('../img/decor/balloon.svg')
+            position absolute
+            left 122px
+            top -50px
+
+            +maxwidth($xl-max) {
+                left 50px
+                top -50px
+            }
+
+            +maxwidth($lg-max) {
+                display none
+            }
+        }
+
+        &:after {
+            content url('../img/decor/balloons.svg')
+            position absolute
+            right 243px
+            bottom 0
+
+            +maxwidth($lg-max) {
+                display none
+            }
+        }
+
+        &--header__wrapper {
+            display flex
+            justify-content space-between
+            flex-wrap wrap
+            margin-bottom 16px
+
+            +maxwidth($xl-max) {
+                margin-bottom 50px
+                width calc(100% - 32px)
+            }
+
+            +maxwidth($lg-max) {
+                position absolute
+                top 16px
+                left 16px
+                margin-bottom 0
+            }
+        }
+
+        .toggle-favourite-program {
+            cursor pointer
+            margin-left 24px
+            border-radius 42px
+
+            &.large {
+                width 56px
+                border 2px solid $pink
+            }
+        }
+
+        & + .sponsors {
+            margin-top 150px
+        }
+    }
+
+    .custom-container-spacing {
+        +maxwidth($lg-max) {
+            --bs-gutter-x 16px
+        }
+    }
+}

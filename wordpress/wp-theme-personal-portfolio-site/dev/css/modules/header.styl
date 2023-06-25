@@ -1,0 +1,26 @@
+.header {
+	background-image unset
+	padding 20px 0
+	margin-bottom -95px
+	transition all .3s ease-in-out
+
+	&__wrapper {
+		display flex
+	}
+
+	&__logo {
+		width 100%
+		height auto
+
+		&__wrapper {
+			width 250px
+			height auto
+			display block
+			margin 0 auto
+
+			+for_breakpoint(mobile) {
+				width 225px
+			}
+		}
+	}
+}

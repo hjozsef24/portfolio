@@ -1,0 +1,28 @@
+.contact-modal {
+    position fixed
+    background-color $white
+    top 50%
+    left 50%
+    z-index 99999
+    width 660px
+    border-radius 24px
+    padding 72px 32px
+    transform translate(-50%, -50%)
+    display none
+
+    +maxwidth($md-max){
+        padding: 82px 24px 72px 24px;
+        position fixed
+        left 0
+        right 0
+        bottom 0
+        width 100%
+        top unset 
+        transform unset
+        border-radius 24px 24px 0 0
+    }
+
+    &.is-visible {
+        display block
+    }
+}

@@ -1,0 +1,17 @@
+.progress {
+    margin-bottom: 80px;
+
+    &--cards__wrapper {
+        display: flex;
+        justify-content: space-between;
+        width: calc(100% - 90px);
+
+        +maxwidth($xxl-max) {
+            width: 100%;
+        }
+
+        +maxwidth($md-max) {
+            display: block;
+        }
+    }
+}

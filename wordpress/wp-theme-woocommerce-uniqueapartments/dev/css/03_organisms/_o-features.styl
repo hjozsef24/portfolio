@@ -1,0 +1,16 @@
+.features {
+    &--title, &--text {
+        margin-top: 32px;
+    }
+
+    &--title:not(:first-of-type) {
+        &:before {
+            content: '';
+            width: 100%;
+            height: 1px;
+            background-color: $divider-background;
+            display: block;
+            margin-bottom: 32px;
+        }
+    }
+}

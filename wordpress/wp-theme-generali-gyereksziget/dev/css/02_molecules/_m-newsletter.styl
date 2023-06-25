@@ -1,0 +1,57 @@
+.newsletter {
+    &__wrapper {
+        margin-top 32px
+
+        +maxwidth($xxl-max) {
+            margin-top 150px
+        }
+
+        +maxwidth($lg-max) {
+            margin-top 0
+        }
+
+        form {
+            margin-top 16px
+
+            button {
+                margin-top 32px
+            }
+        }
+
+        .checkbox__wrapper.has-error {
+            margin-top 16px !important
+        }
+
+        .checkbox__wrapper.has-error p {
+            color $red
+        }
+    }
+
+    &--title {
+        font-family $luckiest
+        color $white
+        font-style normal
+        font-weight 400
+        font-size 64px
+        line-height 72px
+
+        +maxwidth($sm-max) {
+            font-size 40px
+            line-height 48px
+            text-align center
+        }
+    }
+
+    &--subtitle {
+        font-family $open-sans
+        color $white
+        font-weight 700
+        font-size 16px
+        line-height 24px
+        margin-top 8px
+
+        +maxwidth($sm-max) {
+            text-align center
+        }
+    }
+}

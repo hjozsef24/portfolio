@@ -1,0 +1,103 @@
+body {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-image: url("blurred.jpg");
+}
+
+#login{
+    background-image: linear-gradient(30deg, #404044 0, black 75%);
+    border-radius: 15px;
+    margin: 75px auto 0 auto;
+    padding: 35px 0 25px 0
+}
+
+#login input[type=text], #login input[type=password]{
+    color: #fff;
+    background: 0 0;
+    border-radius: 0;
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    border-bottom: 2px solid rgba(255,255,255,.302);
+    font-size: 18px;
+    margin-left: 5px;
+}
+
+#login input:active, #login input:focus{
+    outline: unset;
+    box-shadow: unset;
+    border-bottom-color: #fff
+}
+
+
+.login h1 a {
+    background-size: contain;
+    height: 50px;
+    width: 100%;
+    background-image: url("logo.png");
+}
+
+.login #backtoblog a,
+.login #nav a {
+    text-decoration: none;
+    color: white;
+}
+
+.login #backtoblog a:hover,
+.login #nav a:hover,
+.login h1 a:hover {
+    color: white;
+}
+
+.login form {
+    background: transparent;
+    border: unset
+}
+
+.login label {
+    color: #ffffff;
+    font-size: 14px;
+}
+
+.madebylove {
+    position: absolute;
+    bottom: 15px;
+    right: 30px;
+    font-weight: 400;
+    font-size: 16px;
+    color: white;
+}
+
+.wp-core-ui .button-primary {
+    background-image: linear-gradient(30deg,#000,#0c1469);
+    padding: 5px 15px;
+    color: white;
+    border-color: none;
+    color: white;
+    border: none;
+    text-shadow: none;
+    box-shadow: none;
+}
+
+.wp-core-ui .button-primary.focus,
+.wp-core-ui .button-primary.hover,
+.wp-core-ui .button-primary:focus,
+.wp-core-ui .button-primary:hover {
+    background: black;
+}
+
+.privacy-policy-link{
+    color: white;
+}
+
+
+.madebylove strong {
+    font-weight: bold;
+}
+
+.madebylove a {
+    color: white;
+    text-decoration: underline;
+}

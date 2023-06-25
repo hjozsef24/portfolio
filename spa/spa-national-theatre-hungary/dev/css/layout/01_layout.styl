@@ -1,0 +1,379 @@
+$main_color = #BC9137
+$main_hover = #90702B
+
+* {
+  font-family 'Lato', sans-serif
+}
+
+body, html {
+  overflow hidden
+}
+
+a:hover {
+  text-decoration none !important
+}
+
+.page-content {
+  overflow hidden
+}
+
+.brand{
+  color #bc9137
+
+  &:hover{
+    color #b28924
+  }
+}
+
+.svg-text{
+  fill white
+}
+
+::selection {
+  color none
+  background none
+}
+
+::-moz-selection {
+  color none
+  background none
+}
+
+.col-6-custom {
+  @media all and (min-width 767px) and (max-width 885px) {
+    -ms-flex 0 0 50%
+    flex 0 0 50%
+    max-width 50%
+  }
+}
+
+
+//Nav + Header
+nav {
+  position absolute
+  z-index 2
+
+  .nav-column {
+    display block
+    width 100vw
+
+    .logo {
+      margin-top 16px
+      margin-left 32px
+      float left
+
+      @media all and (max-width 885px) {
+        margin-top 5px
+        margin-left 5px
+        float left
+      }
+
+      & svg {
+        @media all and (max-width 992px) {
+          width 180px
+          height auto
+        }
+      }
+    }
+
+    .page--title {
+      color white
+      font-size 24px
+      margin-top 45px
+      margin-right 32px
+      float right
+      font-weight 300
+
+      @media all and (max-width 992px) {
+        font-size 16px
+        margin-right 5px
+        margin-top 25px
+      }
+    }
+  }
+}
+
+
+.description {
+  color white
+  font-weight 400
+  max-width 555px
+  font-size 16px
+  margin-top 16px
+  overflow-x hidden
+  overflow-y auto
+  max-height 450px
+  padding-right 15px
+
+  scrollbar-color #BC9137 #D3D3D3
+  scrollbar-width thin
+
+  &::-webkit-scrollbar {
+    width 4px
+    background-color $main_color
+    opacity 0.1
+  }
+
+  &::-webkit-scrollbar-track {
+    background-color lightgrey
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color $main_color
+    border-radius 100px
+    min-height 40px
+    margin-bottom 150px
+  }
+
+  @media all and (max-width 1550px) {
+    max-width 450px
+    margin-top 30px
+    max-height 300px
+  }
+
+  @media all and (max-width 1440px) {
+    max-width 350px
+    margin-top 30px
+    font-size 15px
+  }
+
+  @media all and (max-width 1199px) {
+    max-width 250px
+  }
+
+  @media all and (max-width 992px) {
+    max-width 285px
+    padding-right 15px
+    margin-top 15px
+    font-size 13px
+    max-height 150px
+    overflow-y scroll
+    overflow-x hidden
+  }
+
+  @media all and (max-height 465px) {
+    max-height 120px
+    margin-bottom 10px
+  }
+
+  @media all and (max-height 330px){
+    max-height 100px
+  }
+}
+
+
+.main-background {
+  height 100vh
+  background-size cover
+  background-repeat no-repeat
+  background-position center
+
+  .main-text {
+    padding-top 220px
+    padding-left 32px
+    width 555px
+    z-index 1
+
+    @media all and (max-width 1499px) {
+      width 450px
+      padding-top 135px
+    }
+
+    @media all and (max-width 992px) {
+      padding-top 120px
+    }
+
+    @media all and (max-width 992px) {
+      padding-top 100px
+      padding-left 15px
+      padding-bottom 25px
+      width 240px
+    }
+
+    @media all and (max-width 645px) {
+      padding-top 100px
+      padding-left 15px
+      padding-bottom 25px
+      width 200px
+    }
+
+    @media all and (max-height 335px) {
+      padding-top 80px
+    }
+
+    &-home {
+      transform translateX(-110%)
+      transition 1.5s ease-in-out
+    }
+
+    .main-title {
+      font-size 64px
+      color $main_color
+      font-weight 300
+      line-height 77px
+
+      @media all and (max-width 1550px) {
+        font-size 40px
+        line-height 1
+      }
+
+      @media all and (max-width 1199px) {
+        font-size 25px
+        line-height 1
+      }
+
+      @media all and (max-width 885px) {
+        font-size 18px
+        line-height 1
+      }
+
+    }
+  }
+}
+
+.cp-text-block {
+  padding-top 93px !important
+  transform translateX(-110%)
+  transition all 1s ease-in-out
+
+  @media all and (max-width 1550px) {
+    padding-top 25px !important
+  }
+}
+
+.secondary-content {
+  padding-left 32px
+  width 555px
+  transform translateX(-110%)
+  transition 1.5s ease-in-out
+
+  .button--secondary {
+    margin 150px 0 95px 0
+
+    @media all and (max-width 992px) {
+      margin 100px 0 10px 0
+    }
+  }
+}
+
+.button--main {
+  margin-top 30px
+  background-color $main_color
+  width 279px
+  height 48px
+  border none
+  transition background-color .25s ease-in-out
+
+  @media all and (max-width 1440px) {
+    margin-top 30px
+  }
+
+  @media all and (max-width 992px) {
+    margin-top 20px
+    width 230px
+    height 40px
+  }
+
+  @media all and (max-width 885px) {
+    margin-top 15px
+    width 240px
+    height 35px
+  }
+
+  @media all and (max-height 465px) {
+    margin-top 0
+    width 205px
+    height 30px
+  }
+
+  &:hover {
+    background-color $main_hover
+  }
+
+  span {
+    color white
+    font-size 16px
+    display flex
+    justify-content center
+    padding-top 11px
+
+    @media all and (max-width 992px) {
+      font-size 14px
+      padding-top 9px
+    }
+
+    @media all and (max-width 885px) {
+      font-size 14px
+      padding-top 6px
+    }
+
+    @media all and (max-height 465px) {
+      font-size 12px
+      padding-top 6px
+    }
+
+    &:after {
+      content url("/a-magyar-szinhazak-trianonja/assets/img/arrows/button_arrow_right.svg")
+      padding-left 13px
+      padding-top 4px
+
+      @media all and (max-width 992px) {
+        padding-top 0
+      }
+    }
+  }
+}
+
+.button--secondary {
+  width 150px
+  height 40px
+  transition background-color .25s ease-in-out
+  background-color rgba(0, 0, 0, 0.3)
+
+  &:hover {
+    background-color rgba(0, 0, 0, 0.5)
+  }
+
+  @media all and (max-width 645px) {
+    width 135px
+  }
+
+  span {
+    color white
+    font-size 16px
+    display flex
+    justify-content center
+    line-height 24px
+    padding-top 7px
+
+    @media all and (max-width 645px) {
+      font-size 14px
+    }
+  }
+}
+
+.button-cp {
+  margin-left 32px
+  margin-top 150px
+
+  @media all and (max-width 992px) {
+    margin-top 90px
+    margin-left 15px
+  }
+}
+
+.column-nested {
+  z-index 1
+}
+
+.privacy-policy{
+  position absolute
+  right 15px
+  bottom 0
+  color $main_color
+
+  @media all and (max-height 365px){
+    font-size 12px
+    bottom -5px
+  }
+}

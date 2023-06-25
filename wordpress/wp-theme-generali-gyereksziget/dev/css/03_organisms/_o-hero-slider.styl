@@ -1,0 +1,25 @@
+.hero-slider {
+    & + .highlighted-programs {
+        margin-top 25px
+
+        +maxwidth($md-max) {
+            margin-top -200px
+        }
+
+        +maxwidth($sm-max) {
+            margin-top -95px
+        }
+    }
+
+    &--extra-text + .highlighted-programs {
+        margin-top 25px
+
+        +maxwidth($md-max) {
+            margin-top -200px
+        }
+
+        +maxwidth($sm-max) {
+            margin-top -95px
+        }
+    }
+}

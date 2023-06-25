@@ -1,0 +1,26 @@
+.text {
+    margin: 56px 0 64px 0;
+
+    +maxwidth($lg-max) {
+        margin: 32px 0;
+    }
+
+    +maxwidth($md-max) {
+        margin: 40px 0;
+    }
+
+    &__wrapper {
+        > * {
+            margin-bottom: 16px;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-size: 32px;
+            line-height: 40px;
+        }
+    }
+}

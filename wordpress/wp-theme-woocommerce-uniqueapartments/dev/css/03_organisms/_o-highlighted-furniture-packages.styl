@@ -1,0 +1,50 @@
+.highlighted-furniture-packages {
+    padding: 32px 0;
+
+    h3 {
+        margin-bottom: 16px;
+
+        +maxwidth($sm-max) {
+            margin-left: 16px;
+        }
+
+        +maxwidth($xs-max) {
+            margin-left: 0;
+        }
+    }
+
+    &-slider {
+        .slick-slide {
+            margin-right: 16px;
+        }
+
+        .slick-dots {
+            display: flex;
+            gap: 10px;
+            list-style: none;
+            position: absolute;
+            bottom: -16px;
+            justify-content: center;
+            padding: 0;
+
+            .slick-active {
+                button {
+                    opacity: 1;
+                }
+            }
+
+            button {
+                cursor: pointer;
+                border: unset;
+                background-color: $inactive-dots;
+                width: 8px;
+                height: 8px;
+                border-radius: 8px;
+                opacity: 0.5;
+                color: transparent;
+                font-size: 0;
+                padding: 0;
+            }
+        }
+    }
+}

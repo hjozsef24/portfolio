@@ -1,0 +1,46 @@
+.faq {
+    .js-faq-answer {
+        display none
+    }
+
+    &__qna_wrapper {
+        padding-bottom 16px
+    }
+
+    &__qna {
+        padding 16px 24px
+        background-color #fff
+        border-radius 24px
+        color $purple
+        font-family $open-sans
+        font-weight 700
+        font-size 18px
+        line-height 24px
+        margin 16px 0
+        cursor pointer
+
+        +maxwidth($lg-max) {
+            font-size 16px
+            padding 16px
+        }
+    }
+
+    &__question {
+        position relative
+
+        p {
+            max-width calc(100% - 32px)
+        }
+    }
+
+    &__answer {
+        padding-top 16px
+        font-weight 400
+        font-size 18px
+        line-height 24px
+
+        +maxwidth($lg-max) {
+            font-size 16px
+        }
+    }
+}

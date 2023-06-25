@@ -1,0 +1,20 @@
+.image-text {
+    padding 134px 0
+    margin-top -80px
+    background-image url('../img/blue-purple-gradient-background.png')
+    background-position center
+    background-size cover
+
+    +maxwidth($lg-max) {
+        background-image unset
+        padding 64px 0 32px 0
+    }
+
+    &__wrapper {
+        display flex
+
+        +maxwidth($lg-max) {
+            flex-flow column
+        }
+    }
+}

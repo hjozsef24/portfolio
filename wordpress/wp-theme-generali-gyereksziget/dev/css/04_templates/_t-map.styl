@@ -1,0 +1,40 @@
+.map {
+    background-color $map-background
+    position relative
+
+    +maxwidth($sm-max) {
+        height 100vh
+    }
+
+    .button-container {
+        position absolute
+        top 32px
+        right 32px
+        color rgba(0, 0, 0, .52)
+        z-index 9
+
+        +maxwidth(1199px) {
+            top 120px
+        }
+
+        +maxwidth($sm-max) {
+            top 20px
+            right 16px
+        }
+
+        .button {
+            display block
+            width 32px
+            height 32px
+            font-size 28px
+            line-height 28px
+            text-align center
+            background white
+            border-radius 8px
+
+            &:first-of-type {
+                margin-bottom 16px
+            }
+        }
+    }
+}

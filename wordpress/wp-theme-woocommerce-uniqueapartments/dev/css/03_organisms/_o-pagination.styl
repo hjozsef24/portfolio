@@ -1,0 +1,35 @@
+.pagination {
+    margin-bottom: 56px;
+    display: flex;
+    gap: 25px;
+    justify-content: center;
+
+    .next {
+        svg {
+            margin-top: 5px;
+            transform: rotate(270deg);
+            width: 15px;
+            height: 15px;
+        }
+    }
+
+    .prev {
+        svg {
+            margin-top: 5px;
+            transform: rotate(90deg);
+            width: 15px;
+            height: 15px;
+        }
+    }
+
+    .page-numbers {
+        font-family: $headline-bold;
+        font-size: 16px;
+        line-height: 24px;
+        color: $primary;
+
+        &.current {
+            color: $current-page-color;
+        }
+    }
+}

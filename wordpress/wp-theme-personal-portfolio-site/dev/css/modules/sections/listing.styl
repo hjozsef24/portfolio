@@ -1,0 +1,44 @@
+.listing {
+    .subtitle__wrapper {
+        margin-top 75px
+
+        +for_breakpoint(mobile) {
+            margin-top 25px
+        }
+
+        .subtitle {
+            font-size 24px
+            font-weight 500
+            margin-bottom 25px
+
+            +for_breakpoint(mobile) {
+                font-size 20px
+                text-align center
+                margin-bottom 0
+            }
+        }
+    }
+
+    .item__wrapper {
+        +for_breakpoint(tablet) {
+            margin-top 15px
+        }
+
+        img {
+            margin 0 auto 15px
+            display block
+            width 77px
+            height 77px
+            object-fit contain
+            object-position center
+
+            +for_breakpoint(tablet) {
+                margin-top 10px
+            }
+        }
+
+        p {
+            text-align center
+        }
+    }
+}

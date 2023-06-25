@@ -1,0 +1,76 @@
+.card-contact {
+    {blue-black-gradient}
+    padding 20px 5px 15px
+    width 310px
+    margin 0 24px
+    transition all .3s ease-in-out
+
+    +for_breakpoint(tablet_smaller) {
+        width 450px
+        margin 25px auto
+        display block
+    }
+
+    +for_breakpoint(mobile) {
+        margin 15px auto
+        width 100%
+    }
+
+    &:hover {
+        {shadow}
+    }
+
+    &__wrapper {
+        display flex
+        flex-direction column
+        justify-content space-between
+        align-items center
+
+        +for_breakpoint(tablet_smaller) {
+            display block
+        }
+
+        +for_breakpoint(mobile) {
+            margin-top 25px
+        }
+    }
+
+    a {
+        text-decoration none
+    }
+
+    img {
+        display block
+        margin auto
+        width 70px
+        height auto
+        object-fit cover
+        object-position center
+
+        +for_breakpoint(mobile) {
+            width 35px
+        }
+    }
+
+    &-title {
+        text-align center
+        font-size 22px
+        font-weight 400
+        margin 25px 0 0
+
+        +for_breakpoint(mobile) {
+           font-size 18px
+        }
+    }
+
+    &-description {
+        text-align center
+        font-size 16px
+        font-weight 400
+        margin 0
+
+        +for_breakpoint(mobile) {
+           font-size 14px
+        }
+    }
+}

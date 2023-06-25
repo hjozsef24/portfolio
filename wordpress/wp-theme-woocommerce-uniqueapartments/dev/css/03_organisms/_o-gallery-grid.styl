@@ -1,0 +1,106 @@
+.gallery {
+    margin-bottom: 32px;
+
+    .custom-container-spacing {
+        --bs-gutter-x: 24px;
+    }
+
+    &--aligned-left {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        grid-gap: 4px;
+        margin-bottom: 4px;
+
+        +maxwidth($md-max) {
+            display: block;
+            margin-bottom: 0;
+        }
+
+        .main-image {
+            grid-area: 1 / 1 / 3 / 3;
+        }
+
+        .gallery-image:nth-child(1) {
+            grid-area: 1 / 3 / 2 / 4;
+        }
+
+        .grid-area:nth-child(2) {
+            grid-area: 1 / 4 / 2 / 5;
+        }
+
+        .grid-area:nth-child(3) {
+            grid-area: 2 / 3 / 3 / 4;
+        }
+
+        .grid-area:nth-child(4) {
+            grid-area: 2 / 4 / 3 / 5;
+        }
+    }
+
+    &--aligned-right {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        grid-gap: 4px;
+        margin-bottom: 4px;
+
+        +maxwidth($md-max) {
+            display: block;
+            margin-bottom: 0;
+        }
+
+        .main-image {
+            grid-area: 1 / 3 / 3 / 5;
+        }
+
+        .gallery-image:nth-child(1) {
+            grid-area: 1 / 1 / 2 / 2;
+        }
+
+        .grid-area:nth-child(2) {
+            grid-area: 1 / 2 / 2 / 3;
+        }
+
+        .grid-area:nth-child(3) {
+            grid-area: 2 / 1 / 3 / 2;
+        }
+
+        .grid-area:nth-child(4) {
+            grid-area: 2 / 2 / 3 / 3;
+        }
+    }
+
+    &--aligned-center {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        grid-gap: 4px;
+        margin-bottom: 4px;
+
+        +maxwidth($md-max) {
+            display: block;
+            margin-bottom: 0;
+        }
+
+        .main-image {
+            grid-area: 1 / 2 / 3 / 4;
+        }
+
+        .gallery-image:nth-child(1) {
+            grid-area: 1 / 1 / 2 / 2;
+        }
+
+        .grid-area:nth-child(2) {
+            grid-area: 2 / 1 / 3 / 2;
+        }
+
+        .grid-area:nth-child(3) {
+            grid-area: 1 / 4 / 2 / 5;
+        }
+
+        .grid-area:nth-child(4) {
+            grid-area: 2 / 4 / 3 / 5;
+        }
+    }
+}

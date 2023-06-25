@@ -1,0 +1,65 @@
+.hero {
+    &__img {
+        width 100%
+        height 365px
+        object-fit cover
+        object-position center
+        border-bottom-left-radius 64px
+        border-bottom-right-radius 64px
+
+        +maxwidth($lg-max) {
+            border-bottom-left-radius 32px
+            border-bottom-right-radius 32px
+            height 280px
+        }
+
+        &-overlay {
+            position absolute
+            top 0
+            left 0
+            width 100%
+            height 99%
+            border-bottom-left-radius 64px
+            border-bottom-right-radius 64px
+            background $black
+            opacity .3
+
+            +maxwidth($lg-max) {
+                border-bottom-left-radius 32px
+                border-bottom-right-radius 32px
+            }
+        }
+    }
+
+    &__text {
+        position absolute
+        left 347px
+        bottom 48px
+
+        +maxwidth($xl-max) {
+            left 32px
+            bottom 48px
+        }
+
+        +maxwidth($lg-max){
+            left 0
+            right 0
+        }
+    }
+
+    h1 {
+        +maxwidth($lg-max) {
+            font-size 40px
+            line-height 48px
+            text-align center
+        }
+    }
+
+    .toggle-favourite-program{
+        +maxwidth($lg-max) {
+            position absolute
+            right 0
+            top 2px
+        }
+    }
+}

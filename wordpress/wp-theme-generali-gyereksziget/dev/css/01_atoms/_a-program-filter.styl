@@ -1,0 +1,73 @@
+.program-filter {
+    &--modal-button {
+        display flex
+        justify-content center
+        margin-top 24px
+        line-height 2
+        position fixed
+        bottom 24px
+
+        &:before {
+            content ''
+            background-image url('../img/svg/program-filter-button-icon.svg')
+            background-repeat no-repeat
+            width 12px
+            height 14px
+            display block
+            margin 9px 10px 0
+        }
+    }
+
+    &--list-button {
+        &:before {
+            content ''
+            background-image url('../img/svg/list-icon.svg') !important
+            background-repeat no-repeat
+            width 12px
+            height 14px
+            display block
+            margin 9px 10px 0
+        }
+    }
+
+    &--modal-close {
+        display block
+        margin 0 0 16px auto
+    }
+
+    .filtered-programs-counter {
+        font-family $luckiest
+        font-weight 400
+        margin-left 4px
+        margin-top 50px
+
+        +between($md-max, $lg-max) {
+            color $text-blue
+            font-size 32px
+            line-height 40px
+        }
+
+        +maxwidth($lg-max) {
+            margin-top 0
+        }
+
+        &--tablet {
+            display none
+
+            +between($md-max, $lg-max) {
+                display block
+            }
+        }
+    }
+
+    .form--current-filter-programs.form--current-filter-programs {
+        margin-top 65px
+        margin-left 32px
+
+        label {
+            color $purple
+            font-weight 700
+            font-size 14px
+        }
+    }
+}

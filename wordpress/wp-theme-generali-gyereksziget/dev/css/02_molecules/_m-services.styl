@@ -1,0 +1,77 @@
+.service {
+    &__card {
+        position relative
+        background-color $white
+        margin 16px 0
+        border-radius 16px
+        padding 24px 16px
+
+        +maxwidth($sm-max) {
+            margin 0 0 40px
+
+            &:first-of-type {
+                margin-top 24px
+            }
+        }
+    }
+
+    &__image {
+        position absolute
+        right 15px
+        top -30px
+        width 100%
+        height 100%
+        max-width 100px
+        max-height 100px
+        object-fit contain
+
+        +maxwidth($sm-max) {
+            top -50px
+        }
+    }
+
+    &__title {
+        margin-right 100px
+        overflow-wrap break-word
+
+        +maxwidth($lg-max) {
+            font-weight 400
+            font-size 24px
+            line-height 32px
+            overflow-wrap break-word
+        }
+    }
+
+    &__excerpt {
+        color #602D90
+        margin-bottom 8px
+        font-weight 400
+        font-size 16px
+        line-height 24px
+        font-family $open-sans
+    }
+
+    &__link {
+        margin-left 36px
+        padding-bottom 24px
+    }
+
+    &__link a {
+        color $text-blue
+        font-weight 700
+        font-size 16px
+        line-height 24px
+        text-decoration none
+        font-family $open-sans
+
+        &:before {
+            position absolute
+            content ''
+            background-image url('../img/svg/pin.svg')
+            background-repeat no-repeat
+            width 24px
+            height 24px
+            left 19px
+        }
+    }
+}

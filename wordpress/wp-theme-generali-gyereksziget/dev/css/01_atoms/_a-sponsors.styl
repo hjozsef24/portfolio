@@ -1,0 +1,60 @@
+.sponsors {
+    h2 {
+        text-align center
+        position relative
+        z-index 999
+
+        +maxwidth($lg-max) {
+            font-weight 400
+            font-size 32px
+            line-height 40px
+        }
+    }
+
+    &:before {
+        content ''
+        background-image url('../img/cloud-white.png')
+        background-position center
+        background-repeat no-repeat
+        background-size cover
+        position absolute
+        top -140px
+        z-index 8
+        width 100%
+        height 100%
+    }
+
+    .slick-list {
+        z-index 999
+    }
+}
+
+.slick-dots {
+    display flex
+    justify-content center
+    gap 10px
+    margin-top 68px
+
+    +maxwidth($lg-max) {
+        margin-top 30px
+    }
+
+    li {
+        &.slick-active {
+            button {
+                opacity 1
+                background-color $light-blue
+            }
+        }
+
+        button {
+            padding 0
+            opacity .3
+            font-size 0
+            width 10px
+            height 10px
+            border-radius 100%
+            background-color $light-blue
+        }
+    }
+}

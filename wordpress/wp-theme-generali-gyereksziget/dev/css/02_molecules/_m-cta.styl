@@ -1,0 +1,44 @@
+.cta {
+    p {
+        color white
+        font-family $open-sans
+        font-weight 700
+        font-size 18px
+        line-height 24px
+    }
+
+    .extra-decor {
+        position relative
+
+        .cta__wrapper {
+            background-image url('../img/nagy_felhok.png')
+            background-repeat no-repeat
+
+            &:after {
+                position absolute
+                content ''
+                background-image url('../img/lama_felho.png')
+                width 565px
+                height 242px
+                left 53px
+                top -25.19px
+            }
+
+            &:before {
+                position absolute
+                content ''
+                background-image url('../img/leghajo_gitar.png')
+                width 505.92px
+                height 151px
+                left 1267px
+                top -18px
+            }
+        }
+    }
+
+    .btn--centered{
+        +maxwidth($lg-max){
+            margin-top 16px
+        }
+    }
+}

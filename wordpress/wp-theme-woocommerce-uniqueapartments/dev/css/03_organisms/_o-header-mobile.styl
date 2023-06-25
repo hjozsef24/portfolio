@@ -1,0 +1,33 @@
+.header-menu--mobile {
+    position: absolute;
+    right: 0;
+    top: 88px;
+    background-color: $white;
+    padding: 56px 48px 16px 32px;
+    width: 376px;
+    z-index: 9999;
+    height: calc(100vh - 88px);
+    transform: translateX(100%);
+    transition: transform 0.3s ease-in-out;
+
+    +maxwidth($md-max) {
+        width: 100vw;
+        top: 60px;
+        height: calc(100vh - 60px);
+        padding: 56px 32px 16px 32px;
+    }
+
+    +maxwidth(340px) {
+        padding: 56px 32px 16px 16px;
+    }
+
+    &.is-active {
+        transform: translateX(0);
+    }
+
+    .profile--hidden {
+        +minwidth($md-max) {
+            display: none;
+        }
+    }
+}

@@ -1,0 +1,43 @@
+.highlighted-news {
+    &--text__wrapper {
+        margin-bottom 40px
+
+        +maxwidth($lg-max) {
+            margin-bottom 24px
+
+            >* {
+                text-align left !important
+            }
+        }
+    }
+
+    .slick-dots {
+        margin-top 24px
+    }
+
+    .slick-slide {
+        margin 0 16px 0 0
+    }
+
+    .slick-list {
+        margin 0 -16px 0 0
+    }
+
+    +maxwidth($lg-max) {
+        h4 {
+            font-size 24px
+            line-height 32px
+        }
+
+        .program-card {
+            margin-top 0
+
+            .text-block {
+                .program-excerpt {
+                    font-size 14px
+                    line-height 20px
+                }
+            }
+        }
+    }
+}

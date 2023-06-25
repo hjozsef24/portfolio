@@ -1,0 +1,138 @@
+input[type='text'], input[type='email'], input[type='password'], input[type='tel'], textarea {
+    padding: 12px 16px;
+    border: 2px solid $primary;
+    border-radius: 0;
+    font-family: $paragraph-regular;
+    font-size: 16px;
+    line-height: 24px;
+    color: $primary;
+
+    &:active, &:focus, &:focus-visible {
+        border-radius: 0;
+        outline: none;
+    }
+}
+
+/* Custom checkbox ends */
+select {
+    width: 440px;
+    height: 48px;
+    padding: 12px 16px;
+    border: 2px solid $primary;
+    font-size: 16px;
+    line-height: 24px;
+    border-radius: 0;
+    appearance: none;
+    background-image: url('../img/svg/arrow-down.svg');
+    background-repeat: no-repeat;
+    background-position: right 1rem center;
+    background-size: 1em;
+    cursor: pointer;
+
+    +maxwidth($xl-max) {
+        width: 350px;
+    }
+
+    +maxwidth($sm-max) {
+        width: 296px;
+    }
+
+    &:focus-visible {
+        border-radius: 0;
+        outline: 0;
+    }
+}
+
+::placeholder, ::-webkit-input-placeholder, :-ms-input-placeholder {
+    font-family: $paragraph-regular;
+    font-size: 16px;
+    line-height: 24px;
+    color: $primary;
+}
+
+/* Custom checkbox starts */
+input[type='checkbox'] {
+    appearance: none;
+    margin: 0;
+    font: inherit;
+    width: 30px;
+    height: 30px;
+    margin-right: 16px;
+    border: 2px solid $primary;
+    border-radius: 0;
+    transform: translateY(-0.075em);
+    display: grid;
+    place-content: center;
+}
+
+input[type='checkbox']::before {
+    content: '';
+    width: 16px;
+    height: 16px;
+    transform: scale(0);
+    transition: 120ms transform ease-in-out;
+    box-shadow: inset 16px 16px $secondary;
+}
+
+input[type='checkbox']:checked::before {
+    transform: scale(1);
+}
+
+.input-group--checkbox {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+
+    label {
+        font-family: $paragraph-regular;
+        font-size: 16px;
+        line-height: 24px;
+    }
+}
+
+.woocommerce-form-login, .woocommerce-form-register {
+    margin-bottom: 56px;
+
+    &__rememberme {
+        display: flex !important;
+        margin-bottom: 24px;
+    }
+
+    .form-row {
+        display: block;
+        margin-bottom: 24px;
+
+        input[type='text'], input[type='password'], input[type='email'] {
+            width: 280px;
+
+            +maxwidth($xl-max) {
+                width: 100%;
+            }
+        }
+
+        label {
+            display: block;
+        }
+    }
+
+    .btn {
+        width: 180px;
+    }
+
+    .lost_password {
+        a {
+            color: $primary;
+        }
+    }
+}
+
+.has-error {
+    input, textarea {
+        border: 2px solid $red;
+    }
+
+    .error-message {
+        color: $red;
+        font-size: 14px;
+    }
+}

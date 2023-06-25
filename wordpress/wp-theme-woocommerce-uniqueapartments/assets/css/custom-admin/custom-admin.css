@@ -1,0 +1,15 @@
+/* Style the  */
+#adminmenuback,
+#adminmenu,
+#adminmenu .wp-submenu {
+    width: 185px;
+}
+
+#wpcontent,
+#wpfooter {
+    margin-left: 185px;
+}
+
+#adminmenu .wp-submenu {
+    left: 185px;
+}
