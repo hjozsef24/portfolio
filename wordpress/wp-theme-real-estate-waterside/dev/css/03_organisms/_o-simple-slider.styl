@@ -1,0 +1,50 @@
+.section__simple-slider {
+    .simple-slider__header {
+        height 532px
+        background-color $primary
+
+        +maxwidth($xl-max) {
+            height 357px
+        }
+
+        +maxwidth($md-max){
+            height 336px
+        }
+
+        .simple-slider__title {
+            margin-top 48px
+            color $white
+
+            +maxwidth($xl-max) {
+                margin-top 40px
+            }
+        }
+    }
+
+    .simple-slider__container {
+        margin-top -396px
+
+        +maxwidth($xl-max) {
+            margin-top -213px
+        }
+    }
+
+    .simple-slider-prev, .simple-slider-next {
+        width 56px
+        height 56px
+
+        +maxwidth($md-max) {
+            display none !important
+        }
+
+        img {
+            width 16px
+        }
+    }
+
+    .simple-slider-prev {
+        img {
+            transform rotate(180deg)
+        }
+    }
+}

@@ -1,0 +1,67 @@
+.publication-card {
+    margin-top 24px
+
+    .publication-card__header {
+        position relative
+
+        .publication-card__badge__wrapper {
+            position absolute
+            top 24px
+            left 24px
+            display flex
+            gap 14px
+
+            .publication-card__badge {
+                color $white
+                leading-trim both
+                text-edge cap
+                font-size 12px
+                font-style normal
+                font-weight 600
+                line-height 20px
+                background-color $primary-lighter
+                padding 2px 12px
+                font-family $paragraph
+                display block
+                border-radius 4px
+                text-transform uppercase
+            }
+        }
+
+        .publication-card__image {
+            width 100%
+            height 240px
+            border-radius 16px 16px 0 0
+        }
+    }
+
+    .publication-card__body {
+        padding 32px 24px 40px
+        background-color #F9F9F9
+        border-radius 0 0 16px 16px
+
+        .publication-card__informations {
+            display flex
+            gap 8px
+
+            >* {
+                color #307FE2
+                font-size 12px
+                font-style normal
+                font-weight 400
+                line-height 20px
+            }
+        }
+
+        .publication-card__title {
+            margin 24px 0
+            color #101010
+            leading-trim both
+            text-edge cap
+            font-size 32px
+            font-style normal
+            font-weight 500
+            line-height 40px
+        }
+    }
+}

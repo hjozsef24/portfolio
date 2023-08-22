@@ -1,0 +1,40 @@
+.section__panorama-slider {
+    padding 90px 0 107px
+    background-color $primary
+
+    +maxwidth($xl-max) {
+        padding 40px 0 80px
+    }
+
+    .panorama-slider__title {
+        text-align center
+        color $white
+        position relative
+        z-index 1
+        margin 0
+    }
+
+    .panorama-slider {
+        margin-top -55px
+
+        +maxwidth($xl-max) {
+            margin-top -16px
+        }
+
+        +maxwidth($md-max) {
+            margin-top 24px
+        }
+
+        img {
+            height 668px
+
+            +maxwidth(1699px) {
+                height 525px
+            }
+
+            +maxwidth($xl-max) {
+                height 303px
+            }
+        }
+    }
+}

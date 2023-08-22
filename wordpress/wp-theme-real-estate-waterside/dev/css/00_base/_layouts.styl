@@ -1,0 +1,54 @@
+html, body {
+    overflow-x hidden
+}
+
+body {
+    position relative
+}
+
+.text-center {
+    text-align center
+}
+
+.p-relative {
+    position relative
+}
+
+.overflow-hidden {
+    overflow hidden !important
+}
+
+.cursor-pointer {
+    cursor pointer
+}
+
+.w-100 {
+    width 100% !important
+}
+
+.w-fit-content {
+    width fit-content
+}
+
+.h-100 {
+    height 100%
+}
+
+.has-overlay {
+    &:after {
+        content ''
+        width 100vw
+        height 100%
+        position absolute
+        top 0
+        bottom 0
+        display block
+        background rgba(0, 0, 0, .4)
+    }
+}
+
+.w-md-100 {
+    +maxwidth($md-max) {
+        width 100%
+    }
+}

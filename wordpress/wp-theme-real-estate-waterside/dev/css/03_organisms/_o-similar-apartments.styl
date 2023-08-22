@@ -1,0 +1,33 @@
+.section__similar-apartments {
+    padding 80px 0 120px
+    background-color $primary
+    background-image url('../img/svg/decor-wave-similar-apartments.svg')
+    background-size cover
+    background-repeat no-repeat
+    background-position center 100px
+
+    +maxwidth($lg-max) {
+        padding 40px 0 48px
+    }
+
+    .section__similar-apartments__title {
+        margin 0 0 80px
+        text-align center
+        color $white
+
+        +maxwidth($md-max) {
+            margin 0 0 32px
+        }
+    }
+}
+
+.section__similar-apartments.section__apartment-cards {
+    .apartment-card__body {
+        background-color $white
+    }
+
+    .apartment-card__footer {
+        background-color $white
+        border-top 2px solid $primary
+    }
+}

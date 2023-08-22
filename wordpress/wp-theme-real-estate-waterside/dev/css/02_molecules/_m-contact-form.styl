@@ -1,0 +1,59 @@
+.section__contacts {
+    .contact-form {
+        .input-group--checkbox {
+            display block
+            margin-top 16px
+
+            &:last-of-type {
+                margin-top 8px
+            }
+
+            label {
+                display flex
+                position relative
+                padding-left 28px
+
+                p {
+                    color $primary
+                }
+            }
+
+            input[type='checkbox']:checked ~ .checkmark {
+                background-color $primary
+            }
+
+            .checkmark {
+                border 2px solid $primary
+                border-radius 4px
+                width 14px
+                height 14px
+                background-color $white
+
+                +maxwidth($xl-max) {
+                    width 16px
+                    height 16px
+                }
+
+                &:after {
+                    left 4px
+                    top 0
+                    width 4px
+                    height 9px
+                }
+            }
+        }
+
+        .input-group {
+            margin-top 56px
+
+            input {
+                width 100%
+            }
+        }
+
+        button[type='submit'] {
+            display block
+            margin 24px auto 0
+        }
+    }
+}

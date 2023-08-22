@@ -1,0 +1,46 @@
+.wishlist__modal {
+    width 580px
+    position fixed
+    top 165px
+    right -490px
+    transition right .3s ease-in-out
+    z-index 9999999
+
+    &.is-visible {
+        right 0
+
+        .wishlist__arrow {
+            transform rotate(0)
+        }
+    }
+
+    .wishlist__header {
+        display flex
+        background-color $primary
+        border-radius 100px 0 0 100px
+        backdrop-filter blur(12px)
+        padding 16px 28px 16px 24px
+        gap 52px
+    }
+
+    .wishlist__body {
+        max-height 280px
+        padding 32px
+        background-color $white
+        width 407px
+        margin-right 0
+        margin-left auto
+        overflow-x auto
+    }
+
+    .wishlist__footer {
+        max-height 280px
+        padding 24px
+        background-color $primary
+        backdrop-filter blur(12px)
+        width 423px
+        margin-right 0
+        margin-left auto
+        border-bottom-left-radius 24px
+    }
+}

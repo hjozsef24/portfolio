@@ -1,0 +1,63 @@
+.map-filter__wrapper {
+    position absolute
+    top 50px
+    left 50%
+    transform translateX(-50%)
+    display flex
+    z-index 999
+    gap 24px
+    width max-content
+
+    +maxwidth($xl-max) {
+        top 40px
+        overflow-x scroll
+        width 100%
+        align-items center
+    }
+
+    .filter-category {
+        display flex
+        gap 8px
+        cursor pointer
+        padding 20px 40px
+        border-radius 100px
+        background rgba(255, 255, 255, .5)
+        box-shadow 0 24px 32px 0 rgba(0, 0, 0, .06)
+        backdrop-filter blur(12px)
+
+        +maxwidth($xl-max) {
+            padding 16px 24px
+        }
+
+        p {
+            color $primary
+            leading-trim both
+            text-edge cap
+            font-family $paragraph
+            font-size 16px
+            font-style normal
+            font-weight 500
+            line-height 1
+            margin-top 1px
+            text-transform uppercase
+            white-space nowrap
+        }
+
+        img {
+            width 18px
+            height 16px
+        }
+
+        &.is-selected {
+            background-color $primary
+
+            p {
+                color $white
+            }
+
+            img {
+                filter invert(96%) sepia(96%) saturate(1%) hue-rotate(102deg) brightness(102%) contrast(100%)
+            }
+        }
+    }
+}

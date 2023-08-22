@@ -1,0 +1,37 @@
+.icon-card__wrapper {
+    border-radius 24px
+    box-shadow 0 24px 32px 0 rgba(0, 0, 0, .1)
+    min-height 260px
+    margin-bottom 24px
+    padding 40px 32px
+    background-color $white
+
+    +maxwidth($md-max) {
+        padding 24px 16px
+        min-height unset
+    }
+
+    img {
+        width 63px
+        height 56px
+        margin-bottom 40px
+
+        +maxwidth($lg-max){
+            margin-bottom 20px
+        }
+    }
+
+    p {
+        font-size 32px
+        font-style normal
+        font-weight 500
+        line-height 48px
+        color #101010
+        word-break break-word
+
+        +maxwidth($lg-max) {
+            font-size 24px
+            line-height 32px
+        }
+    }
+}

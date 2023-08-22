@@ -1,0 +1,157 @@
+footer {
+    .footer__logo {
+        width 277px
+        height 104px
+        margin-bottom 44px
+
+        +maxwidth(1499px) {
+            width 185px
+        }
+
+        +maxwidth($xl-max) {
+            width 276px
+            margin-bottom 32px
+        }
+    }
+
+    .footer__social-title {
+        font-family $paragraph
+        color $white
+        font-size 20px
+        font-weight 400
+        line-height 24px
+        margin-bottom 8px
+    }
+
+    .footer__social-icon__wrapper {
+        display flex
+        gap 16px
+
+        .footer__social-icon {
+            img {
+                width 24px
+                height 24px
+                display block
+            }
+        }
+    }
+
+    .footer__main-copyright > * {
+        color $white
+        font-family $paragraph
+        font-size 16px
+        font-style normal
+        font-weight 400
+        line-height 24px
+
+        +maxwidth($xl-max) {
+            margin-top 32px
+        }
+    }
+
+    .footer__menu {
+        padding 0
+        list-style none
+        margin-top 16px
+
+        li {
+            padding 4px 0
+        }
+
+        li:first-of-type {
+            padding 0 0 4px
+        }
+
+        li:last-of-type {
+            padding 4px 0 0
+        }
+
+        .nav-link {
+            color $white
+            font-family $paragraph
+            font-size 16px
+            font-style normal
+            font-weight 500
+            line-height 24px
+        }
+    }
+
+    .footer__secondary-copyright {
+        color $white
+        font-family $paragraph
+        font-size 10px
+        font-style normal
+        font-weight 400
+        line-height 20px
+    }
+
+    .footer_newsletter_title {
+        color $white
+        font-family $paragraph
+        font-size 32px
+        font-style normal
+        font-weight 500
+        line-height 48px
+        max-width 445px
+        margin 0 auto
+
+        +maxwidth($xl-max) {
+            max-width 100%
+            margin 32px 0 0
+        }
+    }
+
+    form {
+        max-width 445px
+        display flex
+        align-items center
+        flex-direction column
+        gap 40px
+        margin 0 auto
+
+        +maxwidth($xl-max) {
+            max-width 100%
+            align-items flex-start
+        }
+    }
+
+    .footer__newsletter-inner__wrapper {
+        display flex
+        align-items center
+        gap 24px
+    }
+
+    .footer__sponsors__wrapper {
+        display flex
+        flex-direction column
+        gap 18px
+        justify-content center
+
+        +maxwidth($xl-max) {
+            flex-direction row
+            align-items center
+            justify-content space-between
+            margin-top 32px
+        }
+
+        +maxwidth($lg-max) {
+            flex-wrap wrap
+        }
+
+        img {
+            margin 0 auto
+            display block
+            width 210px
+            height 72px
+
+            +maxwidth(1299px) {
+                width 150px
+                height auto
+            }
+
+            +maxwidth($xl-max) {
+                margin unset
+            }
+        }
+    }
+}

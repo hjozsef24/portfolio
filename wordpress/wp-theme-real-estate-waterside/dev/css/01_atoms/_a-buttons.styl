@@ -1,0 +1,196 @@
+/**
+ * Custom button styles
+ */
+.btn, button {
+    display inline-block
+    text-align center
+    white-space nowrap
+    vertical-align middle
+    user-select none
+    border-style inset
+    border none
+    font-family $paragraph
+    font-weight 600
+    font-size 16px
+    line-height 24px
+    padding 20px 40px
+    border-radius 100px
+    cursor pointer
+
+    &:focus, &.focus {
+        outline 0
+        border none
+        box-shadow none
+    }
+
+    &:disabled, &.disabled {
+        opacity .5
+        box-shadow none
+        pointer-events none
+        cursor not-allowed
+        border none
+    }
+
+    &:not([disabled]):not(.disabled) {
+        cursor pointer
+    }
+
+    &:active, &:hover, &:focus {
+        text-decoration none !important
+    }
+}
+
+.btn--primary {
+    color $white
+    background-color $primary
+
+    &:active, &:hover, &:focus {
+        // color:;
+        // background:;
+    }
+}
+
+.btn--secondary {
+    color $primary
+    background-color $white
+    box-shadow 0 16px 64px 0 rgba(0, 71, 221, .12)
+
+    &:active, &:hover, &:focus {
+        // color:;
+        // background:;
+    }
+
+    &:visited {
+        color $primary
+    }
+}
+
+.btn--arrow {
+    width 40px
+    height 40px
+    border-radius 71px
+    padding 12px
+    line-height 1
+    cursor pointer
+}
+
+.btn--arrow--bigger {
+    border-radius 172px
+    height 100px
+    width 100px
+}
+
+.btn--lighter-blue {
+    background-color $primary-lighter
+}
+
+.btn--search {
+    display flex
+    gap 16px
+    align-items center
+    width 165px
+    height 56px
+    color $primary
+    leading-trim both
+    text-edge cap
+    font-family $paragraph
+    font-size 16px
+    font-style normal
+    font-weight 600
+    line-height 24px
+
+    &:before {
+        content url('../img/svg/icon-search-blue.svg')
+        display block
+        margin auto 0
+        width 24px
+        height 24px
+    }
+
+    +maxwidth($xl-max) {
+        width 348px
+        justify-content center
+    }
+
+    +maxwidth($md-max) {
+        width 100%
+    }
+}
+
+.btn--choose-style {
+    display block
+    border-radius 200px
+    background rgba(217, 217, 217, .3)
+    box-shadow 0 16px 64px 0 rgba(0, 71, 221, .12)
+    backdrop-filter blur(12px)
+    width 149px
+    height 57px
+    color $white
+    text-align center
+    leading-trim both
+    text-edge cap
+    font-size 24px
+    font-style normal
+    font-weight 500
+    line-height 32px
+    text-transform uppercase
+    font-family $paragraph
+    padding 86px 40px
+    display block
+    margin -115px auto 0
+
+    +maxwidth($xl-max) {
+        font-size 16px
+        line-height 24px
+        width 114px
+        height 46px
+        padding 34px 0
+        margin 34px auto 0
+    }
+}
+
+.btn--back-to-articles {
+    color $primary
+    leading-trim both
+    text-edge cap
+    font-size 16px
+    font-style normal
+    font-weight 500
+    line-height 1
+    text-transform lowercase
+    font-family $paragraph
+
+    &:before {
+        content url('../img/svg/arrow-blue.svg')
+        transform rotate(180deg)
+        display inline-block
+        margin-right 12px
+    }
+
+    &:visited {
+        color $primary
+    }
+}
+
+.btn--pagination {
+    width 56px
+    height 56px
+
+    img {
+        width 16px
+        height 16px
+    }
+}
+
+.btn--download {
+    display flex
+    margin 0 auto
+    width fit-content
+    line-height 1
+
+    &:before {
+        content url('../img/svg/icon-download.svg')
+        display inline-block
+        margin-right 12px
+    }
+}

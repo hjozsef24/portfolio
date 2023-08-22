@@ -1,0 +1,101 @@
+.template--single-apartments {
+    padding-top 120px
+
+    +maxwidth($xl-max) {
+        padding-top 40px
+    }
+
+    .section__contacts {
+        background-image unset
+        margin-bottom 0
+    }
+
+    .section__apartment__main-information {
+        .section__apartment__available {
+            color #77C5D5
+            margin-bottom 8px
+
+            +maxwidth($xl-max) {
+                margin-top 0
+            }
+        }
+
+        .section__apartment__apartment-title {
+            color $primary
+            margin-bottom 64px
+
+            +maxwidth($xl-max) {
+                font-size 40px
+                line-height 48px
+            }
+        }
+
+        .section__apartment__attribute {
+            display flex
+            justify-content space-between
+
+            &:not(:last-of-type) {
+                margin-bottom 24px
+            }
+
+            h5, h6 {
+                margin 0
+                color $primary
+
+                +maxwidth($xl-max) {
+                    font-size 32px
+                    line-height 40px
+                }
+
+                +maxwidth($md-max) {
+                    font-size 24px
+                    line-height 32px
+                }
+            }
+        }
+
+        .section__apartment__request-more {
+            margin-top 64px
+            display flex
+            gap 40px
+
+            +maxwidth($md-max) {
+                flex-direction column
+                gap 32px
+                justify-content center
+            }
+
+            button {
+                +maxwidth($xl-max) {
+                    width 350px
+                    padding 16px 40px
+                }
+
+                +maxwidth($md-max) {
+                    width auto
+                }
+            }
+        }
+
+        .download-file {
+            display block
+            margin auto 0
+            width 32px
+            height 32px
+
+            +maxwidth($xl-max) {
+                width 56px
+                height 56px
+
+                img {
+                    width 100%
+                    height 100%
+                }
+            }
+
+            +maxwidth($md-max) {
+                margin 0 auto
+            }
+        }
+    }
+}

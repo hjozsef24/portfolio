@@ -1,0 +1,46 @@
+.text-card {
+    border-radius 8px
+    background $text-card-background
+    padding 24px
+    width 268px
+    display flex
+    flex-direction column
+    justify-content center
+
+    +maxwidth($xxl-max){
+        width 159px
+    }
+
+    +maxwidth($xl-max) {
+        width auto
+        flex-grow 1
+    }
+
+    +maxwidth($lg-max) {
+        width calc(50% - 56px)
+    }
+
+    .text-card__title {
+        text-align center
+        color $white
+        font-size 32px
+        font-style normal
+        font-weight 500
+        line-height 48px
+        margin 0 0 8px
+
+        +maxwidth($xl-max) {
+            font-size 24px
+            line-height 32px
+        }
+    }
+
+    .text-card__text {
+        color $white
+        text-align center
+        font-size 16px
+        font-style normal
+        font-weight 400
+        line-height 24px
+    }
+}

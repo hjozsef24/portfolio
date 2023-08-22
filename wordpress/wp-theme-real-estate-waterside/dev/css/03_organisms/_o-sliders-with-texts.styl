@@ -1,0 +1,277 @@
+.section__slider-text-image {
+    position relative
+    padding 0
+
+    .slider-text-image-images__wrapper {
+        .slider-text-image__image {
+            height 840px
+
+            +maxwidth($xl-max) {
+                height 384px
+            }
+
+            +maxwidth($md-max) {
+                height 360px
+            }
+        }
+    }
+
+    .slider-text-image-texts__wrapper {
+        margin-top 250px
+        margin-left 140px
+        max-width 500px
+
+        +maxwidth(1439px) {
+            margin-left 50px
+            margin-right 32px
+        }
+
+        +maxwidth($xl-max) {
+            margin 0 20px 24px
+            max-width 304px
+        }
+
+        +maxwidth($md-max) {
+            padding-top 24px
+            max-width unset
+        }
+
+        .slider-text-image__title {
+            color $primary
+            margin-bottom 32px
+
+            +maxwidth($xl-max) {
+                margin-bottom 18px
+                font-size 40px
+                line-height 48px
+            }
+        }
+
+        .slider-text-image__text {
+            font-weight 400
+            color $primary
+        }
+    }
+
+    .slider-text-image__decor {
+        position absolute
+        right 175px
+        bottom -140px
+        z-index 9999
+
+        +maxwidth(1439px) {
+            right 0
+        }
+
+        +maxwidth($xl-max) {
+            height 360px
+            width 180px
+            right -50px
+            bottom -160px
+            left unset !important
+        }
+    }
+
+    .text-image-slider__navigation {
+        position absolute
+        bottom 195px
+        z-index 99999
+        left 50%
+        transform translateX(-45%)
+        display flex
+        align-items center
+        gap 24px
+
+        +maxwidth($xl-max) {
+            position relative
+            transform unset
+            left unset
+            bottom unset
+            margin-left 20px
+        }
+
+        +maxwidth($md-max) {
+            padding-bottom 80px
+        }
+
+        .text-image-slider-prev, .text-image-slider-next {
+            img {
+                width 100%
+            }
+        }
+
+        .text-image-slider-prev {
+            transform rotate(180deg)
+        }
+
+        .text-image-slider-counter {
+            color $primary
+            min-width 35px
+        }
+    }
+
+    .decor-aligned-left {
+        .slider-text-image__decor {
+            right unset
+            left 145px
+            bottom 0
+
+            +maxwidth(1439px) {
+                left 0
+            }
+
+            +maxwidth($xl-max) {
+            }
+        }
+    }
+
+    .align-xl-center {
+        +maxwidth($xl-max) {
+            height 100%
+            margin-top auto
+            margin-bottom auto
+        }
+    }
+}
+
+.section__slider-text-image:nth-of-type(n+4) {
+    padding 70px 0
+
+    +maxwidth($xl-max) {
+        padding 0
+    }
+}
+
+.section__slider-text-image:nth-of-type(4n) {
+    &:before {
+        content ''
+        display block
+        position absolute
+        bottom 0
+        height 275px
+        width 100%
+        background-color $grey
+
+        +maxwidth($xl-max) {
+            display none
+        }
+    }
+
+    .text-image-slider__navigation {
+        left 59%
+        bottom 254px
+
+        +maxwidth($xl-max) {
+            left unset
+            bottom unset
+        }
+
+        +maxwidth($md-max) {
+            padding-bottom 80px
+        }
+    }
+}
+
+.section__slider-text-image:nth-of-type(5n) {
+    &:before {
+        content ''
+        display block
+        position absolute
+        top 0
+        height 710px
+        width 100%
+        background-color $grey
+
+        +maxwidth($xl-max) {
+            content unset
+        }
+    }
+
+    +maxwidth($xl-max) {
+        background-color $grey
+    }
+
+    .slider-text-image__decor {
+        +maxwidth($xl-max) {
+            left 50% !important
+            transform translateX(-50%)
+            bottom 0
+        }
+    }
+
+    .text-image-slider__navigation {
+        left 40%
+        bottom 250px
+
+        +maxwidth($xl-max) {
+            bottom unset
+            left 0
+        }
+
+        +maxwidth($md-max) {
+            padding-bottom 80px
+        }
+    }
+}
+
+.section__slider-text-image:nth-of-type(3) {
+    &:before {
+        content ''
+        background-color $grey
+        display block
+        width 100%
+        height 474px
+        position absolute
+        top 0
+        left 0
+
+        +maxwidth($xl-max) {
+            height 100%
+        }
+    }
+
+    .slider-text-image__decor {
+        bottom 220px
+
+        +maxwidth(1439px) {
+            left 0
+            bottom 150px
+        }
+
+        +maxwidth($xl-max) {
+            bottom -205px
+        }
+    }
+
+    .text-image-slider__navigation {
+        left 40%
+
+        +maxwidth($xl-max) {
+            left 20px
+        }
+
+        +maxwidth($md-max) {
+            padding-bottom 80px
+        }
+    }
+
+    .slider-text-image-texts__wrapper {
+        position relative
+        padding-top 140px
+        padding-left 155px
+        margin-left 0
+        margin-top 0
+
+        +maxwidth(1439px) {
+            padding-left 40px
+        }
+
+        +maxwidth($xl-max) {
+            padding-top 0
+        }
+
+        +maxwidth($md-max){
+            padding-top 24px
+        }
+    }
+}

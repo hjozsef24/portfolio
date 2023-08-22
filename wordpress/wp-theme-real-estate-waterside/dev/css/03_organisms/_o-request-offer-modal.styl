@@ -1,0 +1,105 @@
+.section__request-modal {
+    position fixed
+    right 0
+    top 0
+    bottom 0
+    height auto
+    width 640px
+    padding 80px 80px 40px
+    background-color $white
+    background-image url('../img/svg/decor-offer-modal.svg')
+    background-repeat no-repeat
+    background-position right -5px
+    z-index 99999999
+    transform translateX(100%)
+    overflow-y scroll
+    transition transform .5s ease-in-out
+
+    &.is-visible {
+        transform translateX(0)
+    }
+
+    +maxwidth($xl-max) {
+    }
+
+    +maxwidth($lg-max) {
+        width calc(100% - 32px)
+        padding 32px 16px
+    }
+
+    .section__request-modal__title {
+        color $primary
+        text-transform uppercase
+        margin-bottom 32px
+
+        +maxwidth($lg-max) {
+            font-size 40px
+            line-height 48px
+            max-width 185px
+        }
+    }
+
+    .contact-form {
+        width 570px
+
+        +maxwidth($md-max) {
+            width 100%
+        }
+
+        .input-group {
+            margin-top 56px
+
+            input {
+                width 100%
+            }
+        }
+
+        .input-group--checkbox {
+            margin-top 16px
+
+            &:last-of-type {
+                margin-top 8px
+            }
+
+            label {
+                p {
+                    color $primary
+                    margin-left 8px
+                }
+            }
+
+            .checkmark {
+                border 2px solid $primary-lighter
+                border-radius 4px
+                background-color $white
+            }
+
+            input[type='checkbox']:checked ~ .checkmark {
+                background-color $primary-lighter
+            }
+        }
+
+        .btn {
+            display block
+            margin 56px auto 0
+
+            +maxwidth($xl-max) {
+                margin 40px auto 0
+            }
+        }
+    }
+
+    .close-request-modal {
+        position absolute
+        top 40px
+        right 40px
+        cursor pointer
+        width 36px
+        height 36px
+
+        +maxwidth($xl-max) {
+            top 32px
+            right 32px
+        }
+    }
+}

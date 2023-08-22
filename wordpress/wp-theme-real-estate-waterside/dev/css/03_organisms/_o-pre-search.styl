@@ -1,0 +1,78 @@
+.section__pre-search {
+    background-color $primary
+    padding 56px 0 0
+
+    +maxwidth($xl-max) {
+        padding 56px 0 0
+    }
+
+    .filter-form--group {
+        +maxwidth($lg-max) {
+            margin-bottom 24px
+        }
+
+        &:first-of-type {
+            margin-bottom 16px
+
+            +maxwidth($xl-max) {
+                margin-bottom 24px
+            }
+        }
+    }
+
+    .filter-form--group--divider--responsive {
+        display flex
+
+        +maxwidth($xl-max) {
+            flex-basis 100%
+            justify-content center
+            margin-top 56px
+            width 348px
+        }
+
+        +maxwidth($lg-max) {
+            margin-top 0
+            width 100%
+        }
+
+        button {
+            +maxwidth($xl-max) {
+                width 348px
+                justify-content center
+            }
+        }
+    }
+
+    .pre-search__form-wrapper {
+        display flex
+        align-items flex-end
+
+        +maxwidth($xl-max) {
+            justify-content center
+            flex-wrap wrap
+            margin-top 24px
+        }
+
+        +maxwidth($lg-max) {
+            justify-content flex-start
+        }
+    }
+
+    .animated-svg {
+        margin-top -147px
+
+        +maxwidth(1875px) {
+            width 100%
+        }
+
+        +maxwidth($xl-max) {
+            width 594px
+            margin-top -120px
+        }
+
+        +maxwidth($md-max) {
+            width calc(100vw - 32px)
+            margin-top -135px
+        }
+    }
+}

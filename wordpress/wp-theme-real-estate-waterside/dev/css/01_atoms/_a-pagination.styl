@@ -1,0 +1,33 @@
+.pagination {
+    margin-top 80px
+    display flex
+    justify-content center
+    gap 24px
+    align-items center
+
+    +maxwidth($xl-max) {
+        margin-top 32px
+    }
+
+    .page-numbers, .page-numbers.current {
+        text-align center
+        leading-trim both
+        text-edge cap
+        font-size 16px
+        font-style normal
+        font-weight 500
+        line-height 24px
+        font-family $paragraph
+        color $primary-lighter
+    }
+
+    .prev {
+        button {
+            transform rotate(180deg)
+        }
+    }
+
+    a, a:visited {
+        color $primary-lighter
+    }
+}

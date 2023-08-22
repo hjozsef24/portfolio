@@ -1,0 +1,27 @@
+.section__icon-cards {
+    padding 42px 0 14px
+    background-image url('../img/svg/decor-wave-blue-top-half.svg')
+    background-repeat no-repeat
+    background-position bottom
+    background-size contain
+
+    .section__icon-cards__title {
+        text-align center
+        color $primary
+        margin 0 0 32px
+    }
+
+    .show-more-icon-cards {
+        background-color $primary-lighter
+        color $white
+        box-shadow 0 16px 64px 0 rgba(0, 71, 221, .12)
+        border-radius 100px
+        display block
+        margin 40px auto 0
+        padding 16px 40px
+
+        +maxwidth($xl-max) {
+            margin 24px auto 0
+        }
+    }
+}

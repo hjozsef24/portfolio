@@ -1,0 +1,129 @@
+.section__search-bar {
+    background-color $primary
+    padding 56px 0
+
+    +maxwidth($xl-max) {
+        padding 80px 0
+    }
+
+    +maxwidth($md-max) {
+        padding 40px 0
+    }
+
+    .section__search-bar__filters {
+        display flex
+        justify-content center
+        flex-direction column
+    }
+
+    .section__search-bar__input__wrapper {
+        display flex
+        justify-content center
+
+        +maxwidth($xl-max) {
+            flex-wrap wrap
+        }
+
+        +maxwidth($md-max) {
+            justify-content flex-start
+        }
+    }
+
+    .section__search-bar__checkbox-filters {
+        display flex
+        justify-content center
+        margin-top 40px
+
+        +maxwidth($xl-max) {
+            flex-wrap wrap
+            justify-content flex-start
+            margin 16px auto 40px
+            max-width 596px
+            row-gap 24px
+        }
+
+        +maxwidth($md-max) {
+            flex-direction column
+            margin 40px 0
+        }
+
+        .input-group--checkbox__wrapper {
+            display flex
+            gap 16px
+            position relative
+
+            +maxwidth($xl-max) {
+                gap 32px
+            }
+
+            +maxwidth($md-max) {
+                gap 16px
+            }
+
+            &:not(:first-of-type) {
+                &:before {
+                    content ''
+                    height 20px
+                    width 1px
+                    padding 0
+                    margin 2px 16px 0
+                    background-color $white
+                    opacity .2
+
+                    +maxwidth($xl-max) {
+                        display none
+                    }
+                }
+            }
+
+            &:nth-child(2) {
+                +maxwidth($xl-max) {
+                    margin-left auto
+                }
+
+                +maxwidth($md-max) {
+                    margin-left 0
+                }
+            }
+
+            >* {
+                font-size 12px
+                font-style normal
+                font-weight 400
+                line-height 25px
+                font-family $paragraph
+            }
+
+            .checkmark {
+                border 2px solid #307FE2
+                border-radius 4px
+            }
+
+            .text-divider {
+                color $white
+            }
+
+            .input-group--checkbox {
+                +maxwidth($md-max) {
+                    &:first-of-type {
+                        width 110px
+                    }
+                }
+
+                label {
+                    line-height 25px
+                }
+            }
+        }
+    }
+
+    .filter-form--group {
+        +maxwidth($xl-max) {
+            margin-bottom 24px
+        }
+
+        +maxwidth($md-max) {
+            margin-bottom 16px
+        }
+    }
+}

@@ -1,0 +1,35 @@
+.section__counter {
+    padding 120px 0
+
+    +maxwidth($xl-max) {
+        padding 40px 0
+    }
+
+    .counter__title {
+        color $primary
+
+        +maxwidth($xl-max) {
+            padding-bottom 40px
+        }
+    }
+
+    .counter__text {
+        font-weight 400
+    }
+
+    .counter__wrapper {
+        margin-top 100px
+        display flex
+        justify-content center
+
+        +maxwidth($xl-max) {
+            flex-wrap wrap
+            margin-top 44px
+        }
+
+        +maxwidth($md-max) {
+            flex-direction column
+            justify-content center
+        }
+    }
+}
