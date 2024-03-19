@@ -1,0 +1,76 @@
+.template--contact {
+  background-color: $grey100;
+
+  .main__content {
+    background-color: $white;
+    padding-top: 56px;
+    border-radius: 0px 0px 64px 64px;
+
+    @include max-width($xl-max) {
+      padding-top: 40px;
+      border-radius: 0px 0px 32px 32px;
+    }
+
+    @include max-width($md-max) {
+      padding-top: 32px;
+      border-radius: 0px 0px 16px 16px;
+    }
+
+    h1 {
+      margin-bottom: 56px;
+
+      @include between($md-min, $xl-max) {
+        font-size: 56px;
+        line-height: 64px;
+        margin-bottom: 24px;
+      }
+
+      @include max-width($md-max) {
+        margin-bottom: 40px;
+      }
+    }
+  }
+
+  .section__opening-hours {
+    margin-top: 56px;
+
+    @include max-width($xl-max) {
+      margin-top: 40px;
+    }
+
+    .opening-hours__wrapper {
+      h4 {
+        margin-bottom: 24px;
+      }
+
+      .opening-hours__inner {
+        display: flex;
+        gap: 24px;
+
+        @include max-width($xl-max) {
+          flex-wrap: wrap;
+          gap: 50px;
+        }
+
+        .opening-hours {
+          width: calc(33% - 24px);
+          display: flex;
+          flex-direction: column;
+          gap: 16px;
+
+          @include max-width($xl-max) {
+            width: calc(50% - 24px);
+          }
+
+          @include max-width($md-max) {
+            width: 100%;
+          }
+
+          p {
+            font-weight: 600;
+          }
+        }
+      }
+    }
+  }
+}

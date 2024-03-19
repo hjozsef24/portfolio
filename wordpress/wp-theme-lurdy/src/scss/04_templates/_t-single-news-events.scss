@@ -1,0 +1,39 @@
+.single--news-cpt {
+  background-color: $grey100;
+
+  .section__breadcrumb {
+    padding-top: 56px;
+  }
+
+  section:not(
+      .section__news-events-grid.section__news-events-grid--individual
+    ) {
+    background-color: $white;
+  }
+
+  .section__news-events-grid--individual {
+    @include max-width($md-max) {
+      padding: 32px 0 32px;
+    }
+  }
+
+  .section__back-to-link {
+    padding-top: 32px;
+    padding-bottom: 76px;
+    border-radius: 0px 0px 64px 64px;
+
+    @include max-width($xl-max) {
+      padding-top: 16px;
+      padding-bottom: 56px;
+      border-radius: 0px 0px 24px 24px;
+    }
+  }
+
+  .section_back-to-link--top {
+    .section__back-to-link {
+      padding-top: 16px;
+      padding-bottom: 0;
+      border-radius: 0;
+    }
+  }
+}

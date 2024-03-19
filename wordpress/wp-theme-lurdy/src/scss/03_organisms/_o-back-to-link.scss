@@ -1,0 +1,13 @@
+.section__back-to-link {
+  .back-to-link {
+    gap: 16px;
+    
+    &::before {
+        content: '';
+        display: block;
+        width: 24px;
+        height: 24px;
+        background-image: url("#{$imagePath}icons/arrow-blue.svg");
+    }
+  }
+}

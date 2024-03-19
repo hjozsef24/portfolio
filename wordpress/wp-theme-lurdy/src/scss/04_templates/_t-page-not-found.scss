@@ -1,0 +1,152 @@
+.page--not-found {
+  padding: 260px 0;
+  position: relative;
+
+  @include max-width($xl-max) {
+    padding: 130px 0;
+  }
+
+  .not-found__image {
+    width: 700px;
+    height: auto;
+    margin: 0 auto 56px;
+    display: block;
+
+    @include max-width($xl-max) {
+      width: 400px;
+    }
+
+    @include max-width($md-max) {
+      width: 200px;
+    }
+
+    @include max-width($md-max) {
+      margin: 0 auto;
+    }
+  }
+
+  .not-found__content {
+    padding: 0 16px;
+    
+    > * {
+      margin-top: 24px;
+    }
+  }
+
+  .not-found__button {
+    margin: 24px auto 0;
+  }
+
+  .not-found__decor--first {
+    position: absolute;
+    top: -40px;
+    left: -190px;
+    width: 500px;
+    height: 500px;
+    animation: grow 6s ease-in-out infinite;
+    animation-delay: 0s;
+
+    @include max-width(1599px) {
+      width: 400px;
+      height: 400px;
+    }
+
+    @include max-width($xl-max) {
+      width: 300px;
+      height: 300px;
+      top: -40px;
+      left: -150px;
+    }
+
+    @include max-width($md-max) {
+      width: 200px;
+      height: 200px;
+      top: -65px;
+      left: -125px;
+    }
+  }
+
+  .not-found__decor--second {
+    position: absolute;
+    top: 218px;
+    left: 156px;
+    width: 248px;
+    height: 248px;
+    animation: grow 6s ease-in-out infinite;
+    animation-delay: 1.5s;
+
+    @include max-width(1599px) {
+      width: 175px;
+      height: 175px;
+      top: 170px;
+      left: 115px;
+    }
+
+    @include max-width($xl-max) {
+      width: 125px;
+      height: 125px;
+      top: 140px;
+      left: 25px;
+    }
+
+    @include max-width($md-max) {
+      width: 85px;
+      height: 85px;
+      top: 25px;
+      left: 25px;
+    }
+  }
+
+  .not-found__decor--third {
+    position: absolute;
+    bottom: -80px;
+    right: -80px;
+    width: 450px;
+    height: 450px;
+    z-index: -1;
+    animation: shrink 6s ease-in-out infinite;
+    animation-delay: 1s;
+
+    @include max-width(1599px) {
+      width: 350px;
+      height: 350px;
+    }
+
+    @include max-width($xl-max) {
+      width: 225px;
+      height: 225px;
+    }
+
+    @include max-width($md-max) {
+      width: 100px;
+      height: 100px;
+      bottom: -25px;
+      right: -25px;
+      animation: grow 6s ease-in-out infinite;
+    }
+  }
+}
+
+@keyframes grow {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(0.8);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes shrink {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}

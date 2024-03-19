@@ -1,0 +1,55 @@
+.section__news-events-grid {
+  padding-top: 24px;
+
+  .news-events-grid__wrapper {
+    display: flex;
+    gap: 24px;
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+
+    &[data-news-events] {
+      @include min-width(1293px) {
+        justify-content: space-between;
+      }
+
+      @include max-width($md-max) {
+        margin-bottom: 24px;
+      }
+
+      .slick-slide {
+        margin: 0 8px;
+      }
+
+      .slick-list {
+        margin: 0 -8px;
+      }
+    }
+  }
+
+  .load-more-news-events {
+    text-transform: uppercase;
+    background-color: transparent;
+    margin: 40px auto;
+    display: none;
+    cursor: pointer;
+
+    @include max-width($xl-max) {
+      text-transform: initial;
+      padding: 12px 24px;
+    }
+  }
+}
+
+.section__news-events-grid--individual {
+  padding: 56px 0 16px;
+  margin: 0;
+  background-color: $grey100;
+
+  @include max-width($xl-max) {
+    padding: 40px 0 0;
+  }
+
+  @include max-width($md-max) {
+    padding: 32px 0 32px;
+  }
+}

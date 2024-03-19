@@ -1,0 +1,7 @@
+.section__single-events-informations {
+  padding-top: 40px;
+
+  @include max-width($xl-max){
+    padding-top: 24px;
+  }
+}

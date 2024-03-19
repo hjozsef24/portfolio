@@ -1,0 +1,131 @@
+.section__single-offer-details {
+  padding: 80px 0;
+  background-color: $white;
+  border-radius: 0px 0px 64px 64px;
+
+  @include max-width($xl-max) {
+    padding: 40px 0;
+    border-radius: 0px 0px 32px 32px;
+  }
+
+  @include max-width($md-max) {
+    padding: 16px 0 32px;
+    border-radius: 0px 0px 24px 24px;
+  }
+
+  .offer-details__wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+
+    @include max-width($xl-max) {
+      gap: 16px;
+    }
+
+    @include max-width($md-max) {
+      margin-top: 24px;
+    }
+
+    .discount-badge {
+      position: relative;
+      top: initial;
+      left: initial;
+    }
+
+    h2 {
+      color: $grey900;
+
+      @include max-width($xl-max) {
+        font-size: 32px;
+        font-style: normal;
+        font-weight: 900;
+        line-height: 40px;
+      }
+
+      @include max-width($md-max) {
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 900;
+        line-height: 32px;
+      }
+    }
+
+    h5 {
+      @include max-width($xl-max) {
+        font-family: $craft-gothic-heavy;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 900;
+        line-height: 24px;
+      }
+    }
+
+    .offer-details__shop {
+      font-size: 24px;
+      font-style: normal;
+      font-weight: 900;
+      line-height: 32px;
+      color: $grey900;
+      text-decoration: none;
+      font-family: $craft-gothic-heavy;
+      margin-top: 8px;
+      display: block;
+      width: fit-content;
+
+      @include max-width($xl-max) {
+        font-size: 18px;
+        line-height: 24px;
+      }
+    }
+
+    .offer-details__date {
+      font-weight: 600;
+    }
+
+    .btn--secondary {
+      @include max-width($md-max) {
+        width: auto;
+      }
+    }
+  }
+
+  .description__wrapper {
+    padding: 0 24px;
+
+    @include max-width($xl-max) {
+      padding: 16px 0 0;
+    }
+
+    p {
+      font-size: 18px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 24px;
+
+      @include max-width($xl-max) {
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 24px;
+      }
+
+      &:not(:first-of-type) {
+        margin-top: 24px;
+
+        @include max-width($xl-max) {
+          margin-top: 16px;
+        }
+      }
+    }
+  }
+
+  .offer-details__image {
+    width: 100%;
+    border-radius: 24px;
+    height: auto;
+
+    @include max-width($md-max) {
+      max-height: initial;
+    }
+  }
+}

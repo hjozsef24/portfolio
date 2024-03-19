@@ -1,0 +1,139 @@
+@font-face {
+  font-family: "Craft Gothic Heavy";
+  src: url("../assets/fonts/craft_gothic_heavy.woff") format("woff"),
+    url("../assets/fonts/craft_gothic_heavy.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Craft Gothic Bold";
+  src: url("../assets/fonts/craft_gothic_bold.woff") format("woff"),
+    url("../assets/fonts/craft_gothic_bold.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Craft Gothic Light";
+  src: url("../assets/fonts/craft_gothic_light.woff") format("woff"),
+    url("../assets/fonts/craft_gothic_light.woff2") format("woff2");
+}
+
+h1 {
+  font-family: $craft-gothic-heavy;
+  font-size: 72px;
+  line-height: 80px;
+  font-style: normal;
+  font-weight: 900;
+  color: $grey900;
+
+  @include max-width($xl-max) {
+    font-size: 48px;
+    line-height: 56px;
+  }
+
+  @include max-width($lg-max) {
+    font-size: 32px;
+    line-height: 40px;
+  }
+}
+
+h2 {
+  font-family: $craft-gothic-heavy;
+  font-size: 40px;
+  line-height: 48px;
+  font-style: normal;
+  font-weight: 900;
+  color: $grey900;
+
+  @include max-width($xl-max) {
+    font-size: 32px;
+    line-height: 40px;
+  }
+
+  @include max-width($lg-max) {
+    font-size: 24px;
+    line-height: 32px;
+  }
+}
+
+h3 {
+  font-family: $craft-gothic-heavy;
+  font-size: 32px;
+  line-height: 40px;
+  font-style: normal;
+  font-weight: 900;
+  color: $grey900;
+
+  @include max-width($xl-max) {
+    font-size: 24px;
+    line-height: 32px;
+  }
+}
+
+h4 {
+  font-family: $craft-gothic-heavy;
+  font-size: 24px;
+  line-height: 32px;
+  font-style: normal;
+  font-weight: 900;
+  color: $grey900;
+
+  @include max-width($xl-max) {
+    font-size: 18px;
+    line-height: 24px;
+  }
+
+  &.not--found{
+      color: $grey700;
+  }
+}
+
+h5 {
+  font-family: $craft-gothic-bold;
+  font-size: 18px;
+  line-height: 24px;
+  font-style: normal;
+  font-weight: 700;
+  color: $grey900;
+
+  @include max-width($xl-max) {
+    font-size: 16px;
+    line-height: 24px;
+  }
+}
+
+h6 {
+  font-family: $craft-gothic-bold;
+  font-size: 16px;
+  line-height: 24px;
+  font-style: normal;
+  font-weight: 700;
+  color: $grey900;
+
+  @include max-width($xl-max) {
+    font-size: 16px;
+    line-height: 24px;
+  }
+}
+
+p,
+ul,
+ol {
+  font-family: $montserrat;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+  color: $grey900;
+}
+
+s {
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 24px;
+  color: $grey400;
+  font-family: $montserrat;
+
+  @include max-width($md-max) {
+    font-size: 14px;
+    line-height: 20px;
+  }
+}

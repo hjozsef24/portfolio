@@ -1,0 +1,43 @@
+header {
+  .header__hamburger {
+    width: 64px;
+    height: 48px;
+    gap: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+    border-radius: 100px;
+    padding-right: 16px;
+    background-color: $primary500;
+
+    &.is-active {
+      .header__hamburger--inner {
+        &:first-of-type {
+          transform: translateX(-4px) translateY(4px) rotate(45deg);
+        }
+
+        &:last-of-type {
+          transform: translateX(-4px) translateY(-4px) rotate(-45deg);
+          width: 24px;
+        }
+      }
+    }
+
+    .header__hamburger--inner {
+      height: 3px;
+      display: block;
+      border-radius: 3px;
+      background-color: $grey1000;
+      transition: all 0.3s ease-in-out;
+
+      &:first-of-type {
+        width: 24px;
+      }
+
+      &:last-of-type {
+        width: 12px;
+      }
+    }
+  }
+}

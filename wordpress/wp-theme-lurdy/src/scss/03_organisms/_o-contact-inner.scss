@@ -1,0 +1,8 @@
+.contact__inner {
+  display: flex;
+  gap: 24px;
+
+  @include max-width($xl-max) {
+    flex-direction: column;
+  }
+}

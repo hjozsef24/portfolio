@@ -1,0 +1,103 @@
+.section__wysiwyg {
+  padding: 40px 0;
+
+  & + .section__gallery {
+    padding: 0 0 24px;
+  }
+}
+
+.section__wysiwyg,
+.section__faq,
+.section__app-promotion {
+  .wysiwyg__wrapper {
+    > *:not(:first-child):not(p + p) {
+      margin-top: 24px;
+    }
+
+    strong {
+      font-weight: 600;
+    }
+
+    p + p {
+      margin-top: 16px;
+    }
+
+    mark {
+      background-color: transparent;
+      font-size: 18px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 24px;
+      display: flex;
+      gap: 12px;
+      margin-top: 26px;
+
+      &::before {
+        content: "";
+        min-width: 4px;
+        display: block;
+        min-height: 24px;
+        background-color: $primary500;
+      }
+    }
+
+    ul {
+      li {
+        position: relative;
+        padding-left: 14px;
+
+        &::before {
+          content: "\2022";
+          position: absolute;
+          top: -1px;
+          left: 0;
+          font-size: 24px;
+          height: 24px;
+        }
+      }
+    }
+
+    ol {
+      list-style-position: inside;
+      list-style-type: decimal;
+    }
+
+    blockquote {
+      position: relative;
+      padding-top: 24px;
+
+      &::before {
+        content: "";
+        width: 70px;
+        height: 48px;
+        z-index: -1;
+        display: block;
+        background-image: url("#{$imagePath}decors/blockquote.svg");
+        position: absolute;
+        top: 0;
+        left: -23px;
+
+        @include max-width($xl-max) {
+          left: -12px;
+        }
+      }
+
+      p {
+        font-size: 18px;
+        font-style: italic;
+        font-weight: 600;
+        line-height: 24px;
+      }
+    }
+
+    a:not(.btn) {
+      font-family: $montserrat;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 24px;
+      color: $secondary500;
+      text-decoration: none;
+    }
+  }
+}

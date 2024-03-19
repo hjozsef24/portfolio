@@ -1,0 +1,291 @@
+header {
+  .header__main {
+    background-color: $secondary800;
+    padding: 16px 56px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 0 0 24px 24px;
+    position: relative;
+    z-index: 1;
+
+    @include max-width($xl-max) {
+      padding: 24px;
+    }
+
+    @include max-width($md-max) {
+      padding: 24px 16px;
+    }
+
+    .header__logo,
+    .header__logo img {
+      height: 48px;
+
+      @include max-width($xl-max) {
+        height: 42px;
+      }
+
+      @include max-width($md-max) {
+        height: 32px;
+      }
+    }
+
+    .header__language-hours {
+      display: flex;
+      gap: 24px;
+      align-items: center;
+    }
+  }
+
+  .header__highlighted-button {
+    min-width: 322px;
+
+    @include max-width($xl-max) {
+      min-width: initial;
+      justify-content: flex-end;
+      margin-top: 24px;
+    }
+
+    a {
+      margin-left: auto;
+      padding: 16px 32px;
+      font-family: $craft-gothic-bold;
+    }
+  }
+
+  .header__navigation {
+    background-color: $secondary700;
+    border-radius: 0 0 24px 24px;
+    margin-top: -22px;
+    position: relative;
+    z-index: 0;
+    padding: 36px 56px 16px;
+    transition: 0.3s all ease-in-out;
+
+    &.is-active {
+      right: 0;
+    }
+
+    @include max-width($xl-max) {
+      display: flex;
+      flex-direction: column;
+      border-radius: 24px 0 0 24px;
+      width: 384px;
+      margin: -96px 0 0 auto;
+      height: 100vh;
+      padding: 120px 24px 24px;
+      position: absolute;
+      right: -384px;
+      background-color: $secondary800;
+    }
+
+    @include max-width($md-max) {
+      width: 100%;
+      right: -100%;
+      padding: 104px 16px 24px;
+    }
+
+    .header__navigation__menu {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 24px;
+
+      @include max-width($xl-max) {
+        align-items: flex-end;
+        justify-content: flex-start;
+        flex-direction: column;
+        gap: 32px;
+        padding: 8px 12px 24px;
+        max-height: 405px;
+        overflow-y: auto;
+        overflow-x: hidden;
+      }
+    }
+
+    .nav-link {
+      color: $white;
+      display: block;
+      font-size: 18px;
+      line-height: 24px;
+      position: relative;
+      text-decoration: none;
+      font-family: $craft-gothic-bold;
+      transition: color 0.2s ease-in-out;
+
+      @include max-width($xl-max) {
+        font-size: 24px;
+        line-height: 32px;
+        text-align: right;
+      }
+
+      &:hover {
+        color: $primary400;
+      }
+
+      &.active {
+        color: $primary500;
+      }
+
+      &.dropdown-toggle {
+        @include max-width($xl-max) {
+          display: flex;
+          gap: 8px;
+          align-items: center;
+          justify-content: flex-end;
+
+          &::after {
+            content: "";
+            display: block;
+            width: 24px;
+            height: 24px;
+            transform: rotate(180deg);
+            background-image: url("#{$imagePath}icons/chevron.svg");
+            background-size: contain;
+            background-repeat: no-repeat;
+          }
+        }
+      }
+    }
+
+    .dropdown-menu {
+      position: absolute;
+      top: 76px;
+      display: flex;
+      flex-direction: column;
+      gap: 56px;
+      padding: 32px 24px;
+      border-radius: 0 0 8px 8px;
+      background-color: $secondary800;
+      display: none;
+
+      @include max-width($xl-max) {
+        position: relative;
+        top: unset;
+        gap: 32px;
+        padding: 24px 0 0;
+      }
+
+      &.is-active {
+        display: flex;
+      }
+
+      .nav-link {
+        font-family: $montserrat;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 24px;
+      }
+    }
+
+    .header__navigation__responsive--decor {
+      @include max-width($xl-max) {
+        display: block;
+      }
+
+      @include max-width($md-max) {
+        max-width: 328px;
+        margin-top: 24px;
+      }
+
+      content: "";
+      display: none;
+      width: 100%;
+      height: 2px;
+      background-color: $grey600;
+      margin-right: 0;
+      margin-left: auto;
+    }
+
+    .nav-item {
+      &.is-active {
+        .dropdown-toggle {
+          &::after {
+            transform: rotate(0);
+          }
+        }
+      }
+    }
+  }
+
+  .header__language-selector {
+    display: flex;
+    gap: 8px;
+
+    @include max-width($md-max) {
+      gap: 16px;
+    }
+
+    .current-language {
+      color: $primary500;
+    }
+
+    a {
+      text-transform: uppercase;
+      text-decoration: none;
+      font-size: 16px;
+      font-weight: 700;
+      line-height: 24px;
+      font-family: $craft-gothic-bold;
+
+      &:not(.current-language) {
+        color: $white;
+      }
+    }
+
+    a:not(:first-of-type) {
+      display: flex;
+      gap: 8px;
+
+      @include max-width($md-max) {
+        gap: 16px;
+      }
+
+      &::before {
+        content: "";
+        display: block;
+        height: 100%;
+        width: 2px;
+        max-height: 16px;
+        margin: auto 0;
+        background-color: $grey200;
+      }
+    }
+  }
+
+  .header__language-selector--responsive {
+    margin-top: 24px;
+    justify-content: flex-end;
+  }
+
+  .header__opening-hours {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+
+    @include max-width($xl-max) {
+      justify-content: flex-end;
+      margin-top: auto;
+    }
+
+    p,
+    span {
+      font-family: $craft-gothic-bold;
+      font-size: 18px;
+      font-weight: 700;
+      line-height: 24px;
+    }
+
+    p {
+      color: $white;
+      display: flex;
+      gap: 8px;
+      align-items: center;
+    }
+
+    span {
+      color: $primary500;
+    }
+  }
+}

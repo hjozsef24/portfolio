@@ -1,0 +1,203 @@
+@font-face {
+  font-family: "Craft Gothic Ex Hv";
+  src: url("../../../assets/fonts/craft_gothic_bold.woff") format("woff"),
+    url("../../../assets/fonts/craft_gothic_heavy.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Craft Gothic Bold";
+  src: url("../../../assets/fonts/craft_gothic_bold.woff") format("woff"),
+    url("../../../assets/fonts/craft_gothic_bold.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Craft Gothic Light";
+  src: url("../../../assets/fonts/craft_gothic_light.woff") format("woff"),
+    url("../../../assets/fonts/craft_gothic_light.woff2") format("woff2");
+}
+
+h1 {
+  font-family: "Craft Gothic Ex Hv";
+  font-size: 72px;
+  line-height: 80px;
+  font-style: normal;
+  font-weight: 900;
+  margin-bottom: 0;
+}
+
+h2 {
+  font-family: "Craft Gothic Ex Hv";
+  font-size: 40px;
+  line-height: 48px;
+  font-style: normal;
+  font-weight: 900;
+  margin-bottom: 0;
+}
+
+h3 {
+  font-family: "Craft Gothic Ex Hv";
+  font-size: 32px;
+  line-height: 40px;
+  font-style: normal;
+  font-weight: 900;
+  margin-bottom: 0;
+}
+
+h4 {
+  font-family: "Craft Gothic Ex Hv";
+  font-size: 24px;
+  line-height: 32px;
+  font-style: normal;
+  font-weight: 900;
+  margin-bottom: 0;
+}
+
+h5 {
+  font-family: "Craft Gothic Bold";
+  font-size: 18px;
+  line-height: 24px;
+  font-style: normal;
+  font-weight: 700;
+  margin-bottom: 0;
+}
+
+h6 {
+  font-family: "Craft Gothic Bold";
+  font-size: 16px;
+  line-height: 24px;
+  font-style: normal;
+  font-weight: 700;
+  margin-bottom: 0;
+}
+
+p,
+ul,
+ol {
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+}
+
+*:not(:first-child):not(p + p) {
+  margin-top: 24px;
+}
+
+p + p {
+  margin-top: 16px;
+}
+
+mark {
+  background-color: transparent;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 24px;
+  display: flex;
+  gap: 12px;
+  margin-top: 26px;
+}
+
+mark::before {
+  content: "";
+  min-width: 4px;
+  display: block;
+  min-height: 24px;
+  background-color: #8cc63f;
+}
+
+ul li {
+  position: relative;
+  padding-left: 14px;
+  margin-top: 0 !important;
+  list-style: none;
+}
+
+ul li::before {
+  content: "\2022";
+  position: absolute;
+  top: -1px;
+  left: 0;
+  font-size: 24px;
+  height: 24px;
+}
+
+ol {
+  list-style-position: inside;
+  list-style-type: decimal;
+}
+
+ol li {
+  margin-top: 0 !important;
+}
+
+blockquote {
+  position: relative;
+  padding-top: 24px;
+}
+
+blockquote::before {
+  content: "";
+  width: 70px;
+  height: 48px;
+  z-index: -1;
+  display: block;
+  background-image: url("../../../assets/images/decors/blockquote.svg");
+  position: absolute;
+  top: 18px;
+  left: -23px;
+}
+
+blockquote p {
+  font-size: 18px;
+  font-style: italic;
+  font-weight: 600;
+  line-height: 24px;
+}
+
+a:not(.btn) {
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 24px;
+  color: #2589bb;
+  text-decoration: none;
+}
+
+.btn {
+  font-family: "Craft Gothic Ex Hv";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 24px;
+  text-decoration: none;
+  display: flex;
+  width: fit-content;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease-in-out;
+}
+
+.btn--primary {
+  padding: 18px 32px;
+  color: #0b0c0f;
+  border-radius: 32px;
+  background-color: #8cc63f;
+}
+
+.btn--primary:hover {
+  background-color: #A3D166;
+}
+
+.btn--secondary {
+  color: #144B66;;
+  border: 2px solid #144B66;
+  border-radius: 32px;
+  padding: 16px 30px;
+}
+
+.btn--secondary:hover {
+  color: #2589BB;
+  border: 2px solid #2589BB;
+}

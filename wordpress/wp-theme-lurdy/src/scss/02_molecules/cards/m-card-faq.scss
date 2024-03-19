@@ -1,0 +1,62 @@
+.faq-card {
+  background-color: $white;
+  border-radius: 24px;
+  padding: 24px;
+  box-shadow: 0px 8px 16px 0px rgba(39, 52, 64, 0.1);
+
+  @include max-width($xl-max) {
+    border-radius: 20px;
+    padding: 24px 16px;
+  }
+
+  @include max-width($md-max) {
+    border-radius: 16px;
+    padding: 16px 12px;
+  }
+
+  &:not(:first-of-type) {
+    margin-top: 16px;
+
+    @include max-width($md-max) {
+      margin-top: 24px;
+    }
+  }
+
+  .faq-card__header {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    cursor: pointer;
+
+    .faq-card__header__icon {
+      width: 40px;
+      height: 40px;
+    }
+
+    .faq-card__header__title{
+      word-break: break-all;
+    }
+
+    .faq-card__header__chevron {
+      display: block;
+      width: 24px;
+      height: 24px;
+      margin-left: auto;
+      background-image: url("#{$imagePath}icons/chevron-black.svg");
+
+      &.expanded {
+        background-image: url("#{$imagePath}icons/chevron-blue-hover.svg");
+        transform: rotate(-90deg);
+      }
+    }
+  }
+
+  .faq-card__body {
+    padding-top: 24px;
+    display: none;
+
+    @include max-width($md-max) {
+      padding-top: 16px;
+    }
+  }
+}

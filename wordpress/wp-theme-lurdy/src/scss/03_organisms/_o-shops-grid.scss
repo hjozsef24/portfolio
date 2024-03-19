@@ -1,0 +1,46 @@
+.section__shops-grid {
+  padding: 56px 0;
+  position: relative;
+
+  @include max-width($xl-max) {
+    padding: 40px 0;
+  }
+  
+  @include max-width($md-max) {
+    padding: 32px 0;
+  }
+
+  .shops-grid__wrapper {
+    display: flex;
+    gap: 24px;
+    flex-wrap: wrap;
+
+    @include max-width($md-max){
+      gap: 16px;
+      justify-content: space-between;
+    }
+  }
+
+  .load-more-shops {
+    cursor: pointer;
+    margin: 24px auto;
+    display: none;
+  }
+
+  .shops-back-to-top{
+    opacity: 0;
+    width: 0;
+    height: 0;
+    position: fixed;
+    bottom: 32px;
+    right: 18px;
+    transition: all .15s ease-in;
+
+    &.is-visible{
+      z-index: 2;
+      opacity: 1;
+      width: auto;
+      height: auto;
+    }
+  }
+}

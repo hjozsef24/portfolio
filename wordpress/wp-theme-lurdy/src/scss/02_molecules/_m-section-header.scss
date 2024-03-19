@@ -1,0 +1,17 @@
+.section__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 28px;
+
+    @include max-width($xl-max) {
+      margin-bottom: 24px;
+    }
+
+    h2 {
+      @include max-width($xl-max) {
+        font-size: 32px;
+        line-height: 40px;
+      }
+    }
+  }

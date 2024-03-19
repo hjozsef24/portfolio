@@ -1,0 +1,1 @@
+<span class="discount-badge"><?= $args['discount']; ?></span>

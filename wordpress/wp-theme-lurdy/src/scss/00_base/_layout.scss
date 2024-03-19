@@ -1,0 +1,41 @@
+* {
+  outline-color: transparent !important;
+}
+
+html {
+  scroll-behavior: smooth;
+  position: relative;
+  overflow-x: hidden;
+}
+
+body {
+  position: relative;
+  overflow-x: hidden;
+}
+
+a {
+  -webkit-tap-highlight-color: transparent !important;
+}
+
+a:focus,
+a:visited,
+a:active {
+  outline-color: transparent !important;
+}
+
+.otgs-development-site-front-end {
+  display: none;
+}
+
+main {
+  margin-top: 146px;
+  min-height: 55vh;
+
+  @include max-width($xl-max) {
+    margin-top: 96px;
+  }
+}
+
+.w-100{
+  width: 100%;
+}

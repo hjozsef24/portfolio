@@ -1,0 +1,31 @@
+.section__breadcrumb {
+  padding-bottom: 40px;
+
+  @include max-width($xl-max) {
+    display: none;
+  }
+
+  #breadcrumbs {
+    & > span, .separator {
+      display: flex;
+      align-items: center;
+    }
+
+    span:not(.separator),
+    a {
+      font-family: $montserrat;
+      font-size: 14px;
+      font-weight: 600;
+      line-height: 20px;
+      text-decoration: none;
+
+      &:not(.breadcrumb_last) {
+        color: $secondary500;
+      }
+    }
+
+    .breadcrumb_last {
+      color: $grey400;
+    }
+  }
+}

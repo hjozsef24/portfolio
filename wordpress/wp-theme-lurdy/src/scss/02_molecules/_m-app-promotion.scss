@@ -1,0 +1,103 @@
+.section__app-promotion {
+  .flexible-content__wrapper {
+    .wysiwyg__wrapper.wysiwyg__wrapper {
+      h2 + p {
+        margin-top: 8px;
+      }
+
+      p {
+        strong {
+          font-weight: 600;
+        }
+      }
+    }
+
+    .app-promotion__heading {
+      width: 100%;
+
+      @include max-width($xl-max) {
+        text-align: center;
+        margin-top: 16px;
+      }
+
+      @include max-width($md-max) {
+        text-align: left;
+      }
+    }
+
+    .icon-list__wrapper {
+      display: flex;
+      gap: 26px;
+      align-items: center;
+
+      @include max-width($xl-max) {
+        flex-wrap: wrap;
+        gap: 24px 56px;
+        justify-content: center;
+        max-width: 550px;
+      }
+
+      .icon-list__item {
+        display: flex;
+        gap: 8px;
+        align-items: center;
+        max-width: 230px;
+
+        @include max-width($xl-max) {
+          width: calc(50% - 56px);
+          max-width: 100%;
+        }
+
+        @include max-width($md-max) {
+          width: 100%;
+        }
+
+        img {
+          width: 40px;
+          height: 40px;
+        }
+
+        p {
+          font-weight: 600;
+        }
+      }
+    }
+
+    .appstore-buttons__wrapper {
+      width: 100%;
+
+      .appstore-buttons__title {
+        margin-bottom: 16px;
+
+        @include max-width($xl-max) {
+          text-align: center;
+          margin-top: 16px;
+        }
+
+        @include max-width($md-max) {
+          text-align: left;
+        }
+      }
+
+      .appstore-buttons__wrapper__inner {
+        display: flex;
+        gap: 8px;
+
+        @include max-width($xl-max) {
+          justify-content: center;
+        }
+
+        img{
+          @include max-width($md-max){
+            width: 156px;
+            height: auto;
+          } 
+          
+          @include max-width(339px){
+            width: 145px;
+          }
+        }
+      }
+    }
+  }
+}

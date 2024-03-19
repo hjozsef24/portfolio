@@ -1,0 +1,273 @@
+.section__newsletter {
+  .newsletter__wrapper {
+    button {
+      cursor: pointer;
+
+      @include max-width($md-max) {
+        width: 100%;
+      }
+    }
+
+    &.newsletter__wrapper--one-column {
+      position: relative;
+
+      .input-group {
+        &:first-of-type {
+          margin-top: 16px;
+
+          @include max-width($md-max) {
+            margin-top: 8px;
+          }
+        }
+
+        &:not(:first-of-type) {
+          margin-top: 24px;
+        }
+      }
+
+      .success-block {
+        display: none;
+        padding: 140px 0;
+
+        @include max-width($xl-max) {
+          padding: 0;
+        }
+
+        button {
+          margin-top: 16px;
+        }
+      }
+
+      .newsletter__wrapper__inner {
+        padding: 83px 72px;
+        width: 51%;
+
+        @include max-width($xl-max) {
+          padding: 32px 62px;
+          width: 100%;
+        }
+
+        @include max-width($md-max) {
+          padding: 32px 16px;
+        }
+      }
+
+      .newsletter__decor-image {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+
+        @include max-width(1699px) {
+          width: 54%;
+        }
+
+        @include max-width($xl-max) {
+          max-width: 635px;
+          width: 100%;
+          position: relative;
+          display: block;
+          margin-right: 0;
+          margin-left: auto;
+        }
+
+        @include max-width($md-max) {
+          max-width: 300px;
+        }
+      }
+
+      .newsletter__decor-circle {
+        position: absolute;
+        right: 71px;
+        top: -25px;
+
+        @include between(1441px, 1599px) {
+          top: 25px;
+        }
+
+        @include max-width(1245px) {
+          top: 25px;
+        }
+
+        @include max-width($xl-max) {
+          width: 173px;
+          height: 173px;
+          bottom: 431px;
+          right: 62px;
+          top: initial;
+        }
+
+        @include max-width($md-max) {
+          width: 100px;
+          height: 100px;
+          bottom: 151px;
+          right: 35px;
+          top: initial;
+        }
+      }
+    }
+
+    &.newsletter__wrapper--two-column {
+      .newsletter__wrapper__inner {
+        display: flex;
+        padding: 40px 72px;
+        position: relative;
+        overflow: hidden;
+        border-radius: 24px;
+
+        @include max-width($xl-max) {
+          flex-direction: column;
+          padding: 32px;
+          border-radius: 16px;
+        }
+
+        @include max-width($md-max) {
+          padding: 32px 16px;
+        }
+
+        .success-block {
+          display: none;
+          padding: 0 40px;
+          width: 60%;
+          z-index: 1;
+
+          @include max-width($xl-max) {
+            padding: 24px 0 0;
+            width: 100%;
+          }
+
+          button {
+            margin-top: 16px;
+          }
+        }
+
+        .text__wrapper {
+          width: 40%;
+          padding-right: 40px;
+          margin: auto 0;
+          z-index: 1;
+
+          @include max-width($xl-max) {
+            width: 100%;
+            padding-right: 0;
+          }
+
+          &::after {
+            content: "";
+            width: 2px;
+            height: calc(100% - 80px);
+            display: block;
+            background-color: $secondary200;
+            position: absolute;
+            left: 40%;
+            top: 50%;
+            transform: translateY(-50%);
+
+            @include max-width($xl-max) {
+              display: none;
+            }
+          }
+        }
+
+        .form__wrapper {
+          width: 60%;
+          padding-left: 40px;
+
+          @include max-width($xl-max) {
+            width: 100%;
+            padding-left: 0;
+            margin-top: 40px;
+          }
+
+          @include max-width($md-max) {
+            margin-top: 24px;
+          }
+
+          .input__wrapper {
+            display: flex;
+            gap: 24px;
+
+            @include max-width($md-max) {
+              flex-direction: column;
+            }
+          }
+        }
+
+        .newsletter__decor-blue {
+          width: 128px;
+          height: 128px;
+          top: 25px;
+          left: 25%;
+          position: absolute;
+
+          @include max-width($xl-max) {
+            width: 64px;
+            height: 64px;
+            top: -14px;
+            left: 26%;
+          }
+
+          @include max-width($md-max) {
+            width: 52px;
+            height: 52px;
+            top: 17px;
+            left: initial;
+            right: 114px;
+          }
+        }
+
+        .newsletter__decor-green {
+          position: absolute;
+          top: -215px;
+          left: -215px;
+          width: 348px;
+          height: 348px;
+
+          @include max-width($xl-max) {
+            width: 173px;
+            height: 173px;
+            top: -85px;
+            left: -85px;
+          }
+
+          @include max-width($md-max) {
+            width: 142px;
+            height: 142px;
+            top: -70px;
+            left: -70px;
+          }
+        }
+
+        .newsletter__decor-grey {
+          position: absolute;
+          bottom: -36px;
+          left: 190px;
+          width: 74px;
+          height: 74px;
+
+          @include max-width($xl-max) {
+            width: 37px;
+            height: 37px;
+            top: 120px;
+            left: 17%;
+            bottom: 0;
+          }
+
+          @include max-width($md-max) {
+            width: 30px;
+            height: 30px;
+            top: 100px;
+            left: initial;
+            right: 93px;
+            display: none;
+          }
+
+          @include max-width(429px) {
+            top: 140px;
+            left: 93px;
+            right: initial;
+          }
+        }
+      }
+    }
+  }
+}

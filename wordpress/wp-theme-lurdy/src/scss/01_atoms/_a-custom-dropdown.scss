@@ -1,0 +1,113 @@
+.custom-dropdown {
+  position: relative;
+  display: block;
+  width: 100%;
+
+  .selected-option.placeholder__selected{
+    color: $grey1000;
+  }
+
+  &.is-active {
+    .selected-option {
+      border: 2px solid $primary600;
+
+      &::after {
+        transform: rotate(180deg);
+      }
+    }
+  }
+
+  &.has-selected {
+    .selected-option {
+      color: $grey900;
+    }
+  }
+
+  .selected-option {
+    cursor: pointer;
+    padding: 8px;
+    border: 2px solid $grey900;
+    border-radius: 16px;
+    padding: 16px;
+    font-weight: 600;
+    color: $grey500;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 0.3s ease-in-out;
+
+    @include max-width($xl-max) {
+      padding: 10px 16px;
+    }
+
+    @include max-width($md-max) {
+      padding: 10px 12px;
+    }
+
+    &::after {
+      content: "";
+      display: block;
+      width: 24px;
+      height: 24px;
+      transition: all 0.3s ease-in-out;
+      background-image: url("#{$imagePath}icons/chevron-black.svg");
+    }
+  }
+
+  .dropdown-list {
+    position: absolute;
+    display: none;
+    background-color: $white;
+    box-shadow: 0px 24px 32px 0px rgba(39, 52, 64, 0.08),
+      0px 8px 16px 0px rgba(46, 61, 75, 0.16);
+    border-radius: 24px;
+    width: 100%;
+    top: 72px;
+    max-height: 312px;
+    overflow-y: auto;
+    z-index: 2;
+
+    @include max-width($xl-max) {
+      top: 56px;
+      max-height: 280px;
+      border-radius: 20px;
+    }
+
+    @include max-width($md-max) {
+      max-height: 240px;
+      border-radius: 16px;
+    }
+
+    p {
+      padding: 20px 16px;
+      cursor: pointer;
+      font-weight: 600;
+
+      @include max-width($xl-max) {
+        padding: 16px;
+      }
+
+      @include max-width($md-max) {
+        padding: 12px;
+      }
+
+      &:hover {
+        background-color: #f2f2f2;
+      }
+    }
+
+    a {
+      display: block;
+      padding: 20px 16px;
+      cursor: pointer;
+      font-weight: 600;
+      text-decoration: none;
+      color: $grey1000;
+      font-family: $montserrat;
+
+      &:hover {
+        background-color: #f2f2f2;
+      }
+    }
+  }
+}

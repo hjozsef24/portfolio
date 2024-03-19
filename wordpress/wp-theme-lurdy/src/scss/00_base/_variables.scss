@@ -1,0 +1,64 @@
+// Colors - Default
+$white: #FFFFFF;
+$black: #000000;
+
+// Colors - Primary
+$primary100: #EAF4DC;
+$primary200: #D2E9B4;
+$primary300: #BBDD8D;
+$primary400: #A3D166;
+$primary500: #8CC63F;
+$primary600: #71A130;
+$primary700: #557A24;
+$primary800: #3A5319;
+$primary900: #1E2B0D;
+
+// Colors - Secondary
+$secondary100: #BBDFF2;
+$secondary200: #90CBE9;
+$secondary300: #66B8E1;
+$secondary400: #3BA4D8;
+$secondary500: #2589BB;
+$secondary600: #1D6A91;
+$secondary700: #144B66;
+$secondary800: #0C2C3C;
+$secondary900: #030C11;
+
+// Colors - Grey
+$grey100: #EFF0F3;
+$grey200: #D3D6DE;
+$grey300: #B6BBC8;
+$grey400: #999FB2;
+$grey500: #7C849D;
+$grey600: #626B83;
+$grey700: #4D5366;
+$grey800: #373B49;
+$grey900: #21242C;
+$grey1000: #0B0C0F;
+
+$status-success-color: #37CA60;
+$status-warning-color: #FFB800;
+$status-error-color: #FF003D;
+
+
+// Screen sizes
+$sm-min: 576px;
+$md-min: 768px;
+$lg-min: 992px;
+$xl-min: 1200px;
+$xxl-min: 1400px;
+$sm-max: 575px;
+$md-max: 767px;
+$lg-max: 991px;
+$xl-max: 1199px;
+$xxl-max: 1399px;
+
+// Images default path
+$imagePath: '/images/';
+
+
+// Fonts
+$craft-gothic-heavy: 'Craft Gothic Heavy';
+$craft-gothic-bold: 'Craft Gothic Bold';
+$craft-gothic-light: 'Craft Gothic Light';
+$montserrat: 'Montserrat', sans-serif;

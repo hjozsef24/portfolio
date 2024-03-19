@@ -1,0 +1,257 @@
+.section__app-promotion {
+  padding-bottom: 21px;
+
+  &.extra-margin-bottom {
+    margin-bottom: 56px;
+
+    @include max-width($xl-max) {
+      margin-bottom: 19px;
+    }
+  }
+
+  &.minus-margin-top {
+    margin-top: -50px;
+
+    @include max-width($xl-max) {
+      margin-top: 40px;
+    }
+
+    .flexible-content__wrapper {
+      padding-top: 128px;
+      padding-bottom: 46px;
+
+      @include max-width($xl-max) {
+        padding-top: 24px;
+        padding-bottom: 20px;
+      }
+    }
+  }
+
+  &.instagram-layout {
+    position: relative;
+    padding-bottom: 0;
+    overflow: hidden;
+
+    .instagram__decor {
+      position: absolute;
+      right: -65px;
+      bottom: -215px;
+      width: 415px;
+      height: 415px;
+
+      @include max-width($xl-max) {
+        right: -105px;
+        top: 47px;
+        width: 174px;
+        height: 174px;
+      }
+
+      @include max-width($md-max) {
+        width: 106px;
+        height: 106px;
+        right: -70px;
+        bottom: -57px;
+      }
+    }
+
+    .app-promotion__inner {
+      .image__wrapper {
+        width: calc(50% - 40px);
+        max-width: 880px;
+        position: absolute;
+        bottom: -5px;
+        left: -50px;
+        margin-bottom: 0;
+
+        img {
+          @include max-width($md-max) {
+            margin-left: 0;
+          }
+        }
+
+        @include max-width($xl-max) {
+          left: initial;
+          right: -20px;
+          bottom: -50px;
+          max-width: 565px;
+          width: 100%;
+        }
+
+        @include max-width(465px) {
+          left: -20px;
+          right: 0;
+          bottom: -5px;
+          max-width: initial;
+          width: calc(100% + 36px);
+        }
+      }
+
+      .flexible-content__wrapper {
+        width: calc(50% - 40px);
+        align-items: flex-start;
+        margin-left: 50%;
+        min-height: 640px;
+        justify-content: center;
+
+        @include max-width(1499px) {
+          min-height: 520px;
+          width: 510px;
+          justify-content: flex-start;
+        }
+
+        @include max-width($xl-max) {
+          margin-left: 24px;
+          width: 100%;
+          padding: 0 0 40px;
+        }
+
+        @include max-width($md-max) {
+          margin-left: 0;
+          width: 100%;
+          padding: 0 0 40px;
+        }
+        
+        @include max-width(425px) {
+          min-height: 485px;
+          padding: 0;
+        }
+
+        h1 {
+          text-align: left;
+
+          @include max-width(1499px) {
+            font-size: 56px;
+            line-height: 64px;
+          }
+
+          @include max-width($xl-max) {
+            margin-top: 0;
+          }
+
+          @include max-width($md-max) {
+            font-size: 32px;
+            line-height: 40px;
+          }
+        }
+      }
+    }
+  }
+
+  .responsive-section-title {
+    & + .image__wrapper {
+      @include between($md-min, $xl-max) {
+        margin-top: -24px;
+      }
+    }
+
+    @include min-width($xl-min) {
+      display: none;
+    }
+
+    @include max-width($md-max) {
+      padding: 0 20px;
+    }
+  }
+
+  .image__wrapper {
+    @include max-width($md-max) {
+      margin-bottom: 36px;
+    }
+
+    img {
+      @include max-width($md-max) {
+        width: calc(100% + 72px);
+        margin-left: -40px;
+      }
+    }
+  }
+
+  .app-promotion__title {
+    padding: 56px 0;
+
+    @include between($md-min, $xl-max) {
+      font-size: 56px;
+      line-height: 64px;
+      padding: 40px 0 0;
+    }
+
+    @include max-width($md-max) {
+      padding: 32px 20px 0;
+    }
+  }
+
+  .app-promotion__inner {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+
+    @include max-width($xl-max) {
+      flex-direction: column;
+    }
+
+    &.has-divider {
+      .flexible-content__wrapper {
+        gap: 48px;
+
+        > * {
+          position: relative;
+
+          &:not(:first-child) {
+            &::after {
+              content: "";
+              display: block;
+              width: 100%;
+              height: 2px;
+              position: absolute;
+              top: -24px;
+              background-color: $grey100;
+
+              @include max-width($xl-max) {
+                width: 720px;
+              }
+
+              @include max-width($md-max) {
+                width: 100%;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .image__wrapper {
+      width: calc(40% - 40px);
+
+      @include max-width($xl-max) {
+        width: 100%;
+        max-width: 476px;
+      }
+
+      .app-promotion__image {
+        width: 100%;
+      }
+    }
+
+    .flexible-content__wrapper {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+      align-items: center;
+      max-width: 815px;
+      width: calc(60% - 40px);
+
+      .app-promotion__heading + .wysiwyg__wrapper.wysiwyg__wrapper {
+        margin-top: -40px;
+
+        &::after {
+          display: none;
+        }
+      }
+
+      @include max-width($xl-max) {
+        width: 100%;
+        max-width: 100%;
+      }
+    }
+  }
+}

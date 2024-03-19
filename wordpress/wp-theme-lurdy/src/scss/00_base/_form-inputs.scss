@@ -1,0 +1,186 @@
+.input-group {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+
+  &.has-error {
+    .helper-text {
+      color: $status-error-color;
+      display: block;
+    }
+
+    input {
+      border: 2px solid $status-error-color !important;
+    }
+  }
+
+  .disabled,
+  input:disabled {
+    pointer-events: none;
+
+    .helper-text {
+      color: $grey300;
+    }
+
+    input {
+      color: $grey500;
+      border: 2px solid $grey500;
+    }
+  }
+
+  .helper-text {
+    display: none;
+    font-weight: 400;
+    margin: 8px 0 6px 16px;
+  }
+
+  label {
+    font-size: 14px;
+    color: $grey500;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 20px;
+    font-family: $montserrat;
+    margin: 0 0 6px 16px;
+  }
+
+  input[type="text"],
+  input[type="email"],
+  input[type="search"] {
+    font-family: $montserrat;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 24px;
+    padding: 16px;
+    border-radius: 16px;
+    border: 2px solid $grey900;
+    transition: all 0.3s ease-in-out;
+
+    &:not(:placeholder-shown) {
+      color: $grey900;
+    }
+
+    &:active,
+    &:focus,
+    &:focus-visible {
+      border: 2px solid $primary600;
+      outline: $primary600;
+    }
+
+    @include max-width($xl-max){
+      padding: 14px;
+      border-radius: 20px;
+    } 
+    
+    @include max-width($md-max){
+      padding: 10px 12px;
+      border-radius: 20px;
+    }
+  }
+}
+
+.input-group--checkbox {
+  position: relative;
+
+  &.has-error{
+    .checkmark {
+      border: 2px solid $status-error-color !important;
+    }
+
+    .helper-text {
+      color: $status-error-color;
+      display: block;
+    }
+  }
+
+  .helper-text {
+    display: none;
+  }
+
+  label {
+    display: block;
+    position: relative;
+    cursor: pointer;
+    user-select: none;
+
+    p {
+      padding-left: 32px;
+    }
+
+    p,
+    a {
+      font-family: $montserrat;
+      font-size: 12px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 16px;
+    }
+  }
+
+  input[type="checkbox"] {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+  }
+
+  .checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 24px;
+    width: 24px;
+    background-color: $white;
+    border: 2px solid $grey1000;
+    border-radius: 4px;
+
+    &::after {
+      content: url("#{$imagePath}icons/check.svg");
+      position: absolute;
+      display: none;
+      left: 2px;
+      top: 2px;
+    }
+  }
+
+  input:checked ~ .checkmark:after {
+    display: block;
+  }
+}
+
+.input-group--search {
+  position: relative;
+
+  input {
+    padding: 16px 20px 16px 48px !important;
+
+    @include max-width($xl-max) {
+      padding: 10px 20px 10px 48px !important;
+    }
+  }
+
+  .search-icon {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 16px;
+    width: 24px;
+    height: 24px;
+
+    @include max-width($xl-max) {
+      top: 12px;
+      transform: unset;
+    }
+  }
+
+  .delete-keyword-icon {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 16px;
+    cursor: pointer;
+    display: none;
+  }
+}

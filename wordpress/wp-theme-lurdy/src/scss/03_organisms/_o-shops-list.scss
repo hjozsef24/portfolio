@@ -1,0 +1,44 @@
+.section__shops-list {
+  padding: 56px 0 40px;
+
+  @include max-width($xl-max) {
+    padding: 40px 0 32px;
+  }
+  
+  @include max-width($xl-max) {
+    padding: 32px 0 0;
+  }
+
+  h4 {
+    margin-bottom: 24px;
+
+    @include max-width($xl-max) {
+      margin-bottom: 8px;
+    }
+  }
+
+  .cards__wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+
+    .card__shop {
+      width: calc(12.5% - 24px);
+
+      @include max-width($xl-max) {
+        width: calc(25% - 24px);
+      }
+      
+      @include max-width($md-max) {
+        width: calc(50% - 12px);
+      }
+
+      .card__shop__logo {
+        img {
+          max-width: initial;
+          width: 55%;
+        }
+      }
+    }
+  }
+}

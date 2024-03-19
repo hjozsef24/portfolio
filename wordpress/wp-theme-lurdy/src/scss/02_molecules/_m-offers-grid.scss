@@ -1,0 +1,25 @@
+.section__offers-grid {
+  .offers-grid__list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 26px;
+
+    &.offers-grid-slider {
+      .slick-slide {
+        margin: 0 8px;
+      }
+
+      .slick-list {
+        margin: 0 -8px;
+      }
+    }
+
+    @include max-width($xl-max) {
+      gap: 24px;
+    }
+
+    .load-more-offers {
+      display: none;
+    }
+  }
+}

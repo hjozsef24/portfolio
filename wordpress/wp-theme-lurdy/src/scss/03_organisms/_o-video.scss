@@ -1,0 +1,56 @@
+.section__video {
+  padding: 40px 0 56px;
+  position: relative;
+
+  @include max-width($xl-max) {
+    padding: 40px 0;
+  }
+
+  @include max-width($md-max) {
+    padding: 32px 0 16px;
+  }
+
+  .section__video__player {
+    width: 100%;
+    height: 0;
+    padding-bottom: 56.25%;
+    overflow: hidden;
+    border-radius: 24px;
+    position: relative;
+
+    .section__video__thumbnail {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      cursor: pointer;
+      top: 0;
+      left: 0;
+    }
+
+    .section__video__player-icon {
+      position: absolute;
+      width: 110px;
+      height: auto;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      cursor: pointer;
+
+      @include max-width($xl-max) {
+        width: 85px;
+      }
+      
+      @include max-width($md-max) {
+        width: 60px;
+      }
+    }
+  }
+
+  iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+}

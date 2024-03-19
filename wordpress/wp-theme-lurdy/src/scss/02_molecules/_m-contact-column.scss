@@ -1,0 +1,63 @@
+.contact__inner {
+  .contact__inner__column {
+    width: calc(50% - 24px);
+
+    @include max-width($xl-max) {
+      width: 100%;
+    }
+
+    h4 {
+      margin-bottom: 24px;
+    }
+
+    .contact__inner__column__block {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+
+      &:not(:last-of-type) {
+        margin-bottom: 24px;
+
+        &::after {
+          content: "";
+          display: block;
+          width: 100%;
+          height: 2px;
+          background-color: $grey100;
+        }
+      }
+
+      .icon-name__wrapper {
+        display: flex;
+        gap: 16px;
+        align-items: center;
+
+        img {
+          width: 24px;
+          height: 24px;
+        }
+      }
+
+      p,
+      a {
+        font-weight: 600;
+      }
+
+      a {
+        font-family: $montserrat;
+        font-size: 16px;
+        font-style: normal;
+        line-height: 24px;
+        text-decoration: none;
+        color: $secondary500;
+      }
+
+      .contact-item {
+        display: flex;
+        margin-left: 40px;
+        gap: 8px;
+        flex-wrap: wrap;
+      }
+    }
+  }
+}

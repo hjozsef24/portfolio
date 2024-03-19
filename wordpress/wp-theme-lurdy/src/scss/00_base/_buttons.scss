@@ -1,0 +1,177 @@
+.btn {
+  font-family: $craft-gothic-bold;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 24px;
+  text-decoration: none;
+  display: flex;
+  width: fit-content;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease-in-out;
+
+  &.btn--primary {
+    padding: 18px 32px;
+    color: $grey1000;
+    border-radius: 32px;
+    background-color: $primary500;
+
+    @include max-width($lg-max) {
+      padding: 16px 24px;
+    }
+
+    @include max-width($md-max) {
+      padding: 12px 24px;
+    }
+
+    &:hover {
+      background-color: $primary400;
+    }
+
+    &:visited {
+      background-color: $primary600;
+
+      &:hover {
+        background-color: $primary400;
+      }
+    }
+
+    &.disabled {
+      pointer-events: none;
+      cursor: default;
+      background-color: $grey200;
+      color: $grey400;
+    }
+  }
+
+  &.btn--primary--arrow{
+    gap: 12px;
+
+    @include max-width($sm-max){
+      padding: 12px 20px;
+    }
+    
+    @include max-width(359px){
+      padding: 12px 14px;
+      font-size: 14px;
+      gap: 8;
+    }
+
+    &::after {
+      content: "";
+      display: block;
+      width: 24px;
+      height: 24px;
+      transition: background-image .3s ease-in-out;
+      background-image: url("#{$imagePath}icons/arrow-black.svg");
+    }
+  }
+
+  &.btn--secondary {
+    color: $secondary700;
+    border: 2px solid $secondary700;
+    border-radius: 32px;
+    padding: 16px 30px;
+
+    @include max-width($lg-max) {
+      padding: 14px;
+    }
+
+    &:hover {
+      color: $secondary500;
+      border: 2px solid $secondary500;
+    }
+
+    &:visited {
+      color: $secondary800;
+      border: 2px solid $secondary800;
+
+      &:hover {
+        color: $secondary500;
+        border: 2px solid $secondary500;
+      }
+    }
+
+    &.disabled {
+      pointer-events: none;
+      color: $grey400;
+      border: 2px solid $secondary400;
+    }
+  }
+
+  &.btn--secondary--arrow.btn--secondary--arrow {
+    @include max-width($xl-max) {
+      padding: 10px 20px;
+      
+      &::after {
+        content: "";
+        display: block;
+        width: 24px;
+        height: 24px;
+        transition: background-image .3s ease-in-out;
+        background-image: url("#{$imagePath}icons/chevron-blue.svg");
+      }
+
+      &:hover{
+        &::after{
+          background-image: url("#{$imagePath}icons/chevron-blue-hover.svg");
+        }
+      }
+    }
+  }
+
+  &.btn--text {
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 24px;
+    color: $secondary700;
+
+    &:hover {
+      color: $secondary500;
+    }
+
+    &:visited {
+      color: $secondary800;
+    }
+
+    &.disabled {
+      pointer-events: none;
+      color: $grey400;
+    }
+  }
+
+  &.btn--arrow {
+    color: $primary500;
+    border: 2px solid $primary500;
+    border-radius: 32px;
+    padding: 16px 30px;
+    gap: 16px;
+
+    @include max-width($lg-max) {
+      padding: 14px 20px;
+    }
+
+    @include max-width($md-max) {
+      padding: 10px 20px;
+    }
+
+    &:hover {
+      color: $primary400;
+      border: 2px solid $primary400;
+    }
+
+    &::after {
+      content: "";
+      display: block;
+      width: 24px;
+      height: 24px;
+      background-image: url("#{$imagePath}icons/arrow-green.svg");
+    }
+  }
+}
+
+button[type="submit"]{
+  border: none;
+}

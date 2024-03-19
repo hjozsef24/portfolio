@@ -1,0 +1,16 @@
+.template--offers {
+  background-color: $grey100;
+  padding-top: 56px;
+
+  @include max-width($xl-max) {
+    padding-top: 40px;
+  }
+
+  @include max-width($md-max) {
+    padding-top: 32px;
+  }
+
+  .section__offers-grid {
+    padding: 24px 0;
+  }
+}

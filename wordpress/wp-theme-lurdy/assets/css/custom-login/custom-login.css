@@ -1,0 +1,167 @@
+body {
+  background-color: #0c2c3c;
+  position: relative;
+  overflow: hidden;
+}
+
+#login {
+  width: 345px;
+}
+
+#loginform{
+  border-radius: 16px;
+  padding: 36px 24px 34px;
+  background: #0000003d;
+}
+
+.login form {
+  background: transparent;
+  border: none;
+  margin-top: 0;
+}
+
+.login h1 a {
+  background-image: url("logo.svg");
+  width: 100%;
+  background-size: contain;
+  margin-bottom: 0;
+}
+
+.login input[type="text"],
+.login input[type="password"] {
+  background: transparent;
+  color: white;
+  border: 2px solid #eff0f3;
+  border-radius: 16px;
+  padding: 8px 12px;
+  font-size: 22px;
+  transition: all .2s ease-in-out;
+}
+
+.login input[type="text"]:active,
+.login input[type="password"]:active,
+.login input[type="text"]:focus,
+.login input[type="password"]:focus,
+.login input[type="text"]:focus-visible,
+.login input[type="password"]:focus-visible {
+  border: 2px solid #71A130;
+  outline: #71A130;
+  box-shadow: unset;
+}
+
+.login .button.wp-hide-pw {
+  top: 6px;
+  right: 4px;
+  color: #fff;
+}
+
+.wp-core-ui .button-group.button-large .button,
+.wp-core-ui .button.button-large {
+  border-radius: 24px;
+  background-color: #8cc63f;
+  color: #0b0c0f;
+  font-weight: 600;
+  font-size: 16px;
+  border-color: #8cc63f;
+  font-family: "Montserrat", sans-serif;
+  padding: 6px 12px;
+  transition: all 0.2s ease-in-out;
+  outline: 0;
+}
+
+.wp-core-ui .button-group.button-large .button:hover,
+.wp-core-ui .button.button-large:hover {
+  background-color: #a3d166;
+}
+
+.wp-core-ui .button-group.button-large .button:focus-visible,
+.wp-core-ui .button.button-large:focus-visible,
+.wp-core-ui .button-group.button-large .button:focus,
+.wp-core-ui .button.button-large:focus{
+  outline: 0;
+  box-shadow: unset;
+}
+
+.wpml-login-ls {
+  display: none;
+}
+
+.wp-login-lost-password,
+#backtoblog a,
+label {
+  color: #b6bbc8 !important;
+}
+
+.decor--first {
+  position: absolute;
+  top: -40px;
+  left: -190px;
+  width: 500px;
+  height: 500px;
+  animation: grow 6s ease-in-out infinite;
+  animation-delay: 0s;
+}
+
+.decor--second {
+  position: absolute;
+  top: 218px;
+  left: 156px;
+  width: 248px;
+  height: 248px;
+  animation: grow 6s ease-in-out infinite;
+  animation-delay: 1.5s;
+}
+
+.decor--third {
+  position: absolute;
+  bottom: -80px;
+  right: -80px;
+  width: 450px;
+  height: 450px;
+  z-index: -1;
+  animation: grow 6s ease-in-out infinite;
+  animation-delay: 1s;
+}
+
+@media all and (max-width: 1599px) {
+  .decor--first {
+    width: 400px;
+    height: 400px;
+  }
+
+  .decor--second {
+    width: 175px;
+    height: 175px;
+    top: 170px;
+    left: 115px;
+  }
+
+  .decor--third {
+    width: 350px;
+    height: 350px;
+  }
+}
+
+@media all and (max-width: 1199px) {
+  .decor--first,
+  .decor--second,
+  .decor--third {
+    display: none;
+  }
+
+  #login {
+    width: 320px;
+  }
+}
+
+@keyframes grow {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(0.8);
+  }
+  100% {
+    transform: scale(1);
+  }
+}

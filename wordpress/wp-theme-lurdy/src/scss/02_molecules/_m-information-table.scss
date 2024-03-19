@@ -1,0 +1,118 @@
+.information-table {
+  margin-top: 24px;
+
+  @include max-width($md-max) {
+    margin-top: 16px;
+  }
+
+  .information-table__inner {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    gap: 24px;
+
+    @include max-width($md-max) {
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    &:not(:first-of-type) {
+      margin-top: 48px;
+
+      &::before {
+        content: "";
+        display: block;
+        width: 100%;
+        height: 2px;
+        background-color: $grey100;
+        position: absolute;
+        top: -24px;
+      }
+    }
+
+    &--opening-hours {
+      &:not(:first-of-type) {
+        margin-top: 0;
+
+        &::before {
+          content: unset;
+        }
+      }
+    }
+
+    &--multiple {
+      .information-table__value {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        justify-content: flex-end;
+        align-items: center;
+
+        @include max-width($md-max) {
+          justify-content: flex-start;
+        }
+
+        a:not(:first-of-type) {
+          display: flex;
+          gap: 8px;
+
+          &::before {
+            content: "";
+            height: 24px;
+            width: 2px;
+            background-color: $grey100;
+            display: block;
+
+            @include max-width(425px) {
+              display: none;
+            }
+          }
+        }
+      }
+    }
+
+    .information-table__label {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+
+      p {
+        font-weight: 600;
+        flex-shrink: 0;
+      }
+    }
+
+    .information-table__value {
+      p {
+        font-weight: 600;
+        text-align: right;
+
+        @include max-width($md-max) {
+          text-align: left;
+        }
+
+        &:not(:first-of-type) {
+          @include max-width($md-max) {
+            margin-top: 8px;
+          }
+        }
+      }
+
+      a {
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 24px;
+        display: block;
+        text-align: right;
+        color: $secondary500;
+        text-decoration: none;
+        font-family: $montserrat;
+
+        @include max-width($md-max) {
+          text-align: left;
+        }
+      }
+    }
+  }
+}

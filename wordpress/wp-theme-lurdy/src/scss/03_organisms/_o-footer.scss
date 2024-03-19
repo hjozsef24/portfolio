@@ -1,0 +1,26 @@
+footer {
+  padding: 56px;
+  background-color: $secondary800;
+
+  @include max-width($xl-max) {
+    padding: 40px 64px;
+  }
+
+  @include max-width($md-max) {
+    padding: 40px 16px;
+  }
+
+  .footer__logo {
+    height: 32px;
+    width: fit-content;
+    display: block;
+    margin: 0 auto 40px;
+
+    img {
+      height: 100%;
+      width: auto;
+      margin: 0 auto;
+      display: block;
+    }
+  }
+}

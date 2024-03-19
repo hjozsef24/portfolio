@@ -1,0 +1,33 @@
+#adminmenuback,
+#adminmenu,
+#adminmenu .wp-submenu,
+#adminmenu .wp-submenu li {
+  width: 185px;
+}
+
+#wpcontent,
+#wpfooter {
+  margin-left: 185px;
+}
+
+#adminmenu .wp-submenu {
+  left: 185px;
+}
+
+.mce-content-body p {
+  display: none !important;
+}
+
+body.taxonomy-shops-taxonomy .term-description-wrap, 
+body.taxonomy-shops-taxonomy .term-parent-wrap,
+body.taxonomy-banner-taxonomy .term-description-wrap,
+body.taxonomy-banner-taxonomy .term-parent-wrap,
+body.taxonomy-shops-coupons .term-description-wrap,
+body.taxonomy-shops-coupons .term-parent-wrap,
+body.taxonomy-shops-payment-methods .term-description-wrap,
+body.taxonomy-shops-payment-methods .term-parent-wrap,
+body.taxonomy-faq-taxonomy .term-description-wrap,
+body.taxonomy-faq-taxonomy .term-parent-wrap
+{
+  display: none !important;
+}

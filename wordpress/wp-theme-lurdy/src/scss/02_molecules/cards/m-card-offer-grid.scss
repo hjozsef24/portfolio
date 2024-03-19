@@ -1,0 +1,71 @@
+.card__offer-grid {
+  width: calc(25% - 20px);
+  position: relative;
+
+  @include max-width($xl-max) {
+    width: calc(50% - 12px);
+  }
+
+  @include max-width($md-max) {
+    width: 100%;
+  }
+
+  &:hover {
+    .card__offer-grid__image {
+      @include min-width($xl-min) {
+        transform: scale(1.2);
+      }
+    }
+  }
+
+  .card__offer-grid__permalink {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+  }
+
+  .card__offer-grid__image__wrapper {
+    overflow: hidden;
+    border-radius: 24px;
+    height: 0;
+    padding-bottom: 100%;
+
+    .card__offer-grid__image {
+      width: 100%;
+      height: auto;
+      transition: all 0.3s ease-in-out;
+      background-color: $white;
+    }
+  }
+
+  .card__offer-grid__inner {
+    padding: 14px 24px 0 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    @include max-width($xl-max) {
+      padding: 6px 12px 0 12px;
+      gap: 6px;
+    }
+
+    a {
+      text-decoration: none;
+      color: $grey400;
+      font-family: $montserrat;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 24px;
+      z-index: 1;
+    }
+
+    p {
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 20px;
+    }
+  }
+}

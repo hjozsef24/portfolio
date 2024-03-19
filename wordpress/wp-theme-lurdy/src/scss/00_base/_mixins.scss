@@ -1,0 +1,17 @@
+@mixin min-width($var) {
+    @media all and (min-width: $var) {
+        @content;
+    }
+}
+
+@mixin max-width($var) {
+    @media all and (max-width: $var) {
+        @content;
+    }
+}
+
+@mixin between($min, $max) {
+    @media all and (min-width: $min) and (max-width: $max) {
+        @content;
+    }
+}

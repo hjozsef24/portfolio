@@ -1,0 +1,43 @@
+{
+  "src/assets/fonts/craft_gothic_bold.woff": {
+    "file": "fonts/craft_gothic_bold.woff",
+    "src": "src/assets/fonts/craft_gothic_bold.woff"
+  },
+  "src/assets/fonts/craft_gothic_bold.woff2": {
+    "file": "fonts/craft_gothic_bold.woff2",
+    "src": "src/assets/fonts/craft_gothic_bold.woff2"
+  },
+  "src/assets/fonts/craft_gothic_heavy.woff": {
+    "file": "fonts/craft_gothic_heavy.woff",
+    "src": "src/assets/fonts/craft_gothic_heavy.woff"
+  },
+  "src/assets/fonts/craft_gothic_heavy.woff2": {
+    "file": "fonts/craft_gothic_heavy.woff2",
+    "src": "src/assets/fonts/craft_gothic_heavy.woff2"
+  },
+  "src/assets/fonts/craft_gothic_light.woff": {
+    "file": "fonts/craft_gothic_light.woff",
+    "src": "src/assets/fonts/craft_gothic_light.woff"
+  },
+  "src/assets/fonts/craft_gothic_light.woff2": {
+    "file": "fonts/craft_gothic_light.woff2",
+    "src": "src/assets/fonts/craft_gothic_light.woff2"
+  },
+  "src/js/main.css": {
+    "file": "css/style.css",
+    "src": "src/js/main.css"
+  },
+  "src/js/main.js": {
+    "css": [
+      "css/style.css"
+    ],
+    "file": "js/main.js",
+    "isEntry": true,
+    "src": "src/js/main.js"
+  },
+  "src/scss/styles.scss": {
+    "file": "css/style2.css",
+    "isEntry": true,
+    "src": "src/scss/styles.scss"
+  }
+}

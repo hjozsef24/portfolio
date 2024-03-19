@@ -1,0 +1,11 @@
+.template--news-events {
+  padding-top: 56px;
+
+  @include max-width($xl-max) {
+    padding-top: 40px;
+  }
+  
+  @include max-width($md-max) {
+    padding-top: 32px;
+  }
+}

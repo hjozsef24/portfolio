@@ -1,0 +1,327 @@
+.section__hero {
+  .slick-list {
+    border-radius: 0 0 64px 64px;
+
+    @include max-width($xl-max) {
+      border-radius: 0px 0px 32px 32px;
+    }
+  }
+
+  .slick-slide {
+    overflow: hidden;
+  }
+
+  .hero-slide {
+    height: 944px;
+    position: relative;
+
+    @include max-width($xl-max) {
+      height: 668px;
+    }
+
+    &:not(.overlay-is-hidden) {
+      background: linear-gradient(
+          0deg,
+          rgba(0, 0, 0, 0.2) 0%,
+          rgba(0, 0, 0, 0.2) 100%
+        ),
+        linear-gradient(
+          85deg,
+          rgba(8, 18, 72, 0.6) 0.13%,
+          rgba(7, 17, 68, 0) 67.77%
+        ),
+        linear-gradient(
+          0deg,
+          rgba(11, 20, 51, 0.6) 0%,
+          rgba(11, 20, 51, 0) 38.5%
+        );
+    }
+
+    .hero__image {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+
+      @include max-width($xl-max) {
+        border-radius: 0px 0px 32px 32px;
+      }
+    }
+
+    .hero__video {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      width: 100%;
+      min-height: 100%;
+      z-index: -1;
+      object-fit: cover;
+    }
+
+    .hero-slide__content {
+      padding-left: 80px;
+      padding-bottom: 80px;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+
+      @include max-width($xl-max) {
+        padding-left: 24px;
+        padding-bottom: 24px;
+      }
+
+      @include max-width($md-max) {
+        padding-bottom: 60px;
+      }
+
+      h1 {
+        color: $white;
+        margin-bottom: 24px;
+        max-width: 75%;
+
+        @include max-width($md-max) {
+          max-width: 100%;
+          padding-right: 16px;
+        }
+
+        @include between($md-max, $xl-max) {
+          font-size: 56px;
+          line-height: 64px;
+        }
+
+        @include max-width(359px) {
+          font-size: 28px;
+          line-height: 1.2;
+        }
+      }
+
+      .btn {
+        @include max-width($md-max) {
+          width: calc(100% - 24px);
+        }
+      }
+    }
+  }
+
+  .slick-dots {
+    bottom: 102px;
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 208px;
+    gap: 12px;
+
+    @include max-width($xl-max) {
+      bottom: 46px;
+      padding-right: 152px;
+      gap: 16px;
+    }
+
+    @include max-width($md-max) {
+      bottom: 24px;
+      justify-content: center;
+      padding-right: 0;
+      gap: 24px;
+    }
+
+    li {
+      width: 12px;
+      height: 12px;
+      margin: 0;
+
+      &.slick-active {
+        button {
+          opacity: 1;
+        }
+      }
+
+      button {
+        background-color: $white;
+        width: 12px;
+        height: 12px;
+        border-radius: 12px;
+        opacity: 0.4;
+
+        &::before {
+          opacity: 0;
+        }
+      }
+    }
+  }
+
+  .slider__arrows {
+    position: absolute;
+    right: 80px;
+    bottom: 80px;
+    border: 2px solid $white;
+    border-radius: 1024px;
+    display: flex;
+    gap: 16px;
+    padding: 14px;
+    width: 96px;
+
+    @include max-width($xl-max) {
+      bottom: 24px;
+      right: 24px;
+    }
+
+    .previus-arrow,
+    .next-arrow {
+      cursor: pointer;
+    }
+
+    .next-arrow {
+      transform: rotate(180deg);
+    }
+  }
+
+  .hero__decor--first {
+    position: absolute;
+    top: 200px;
+    left: -50px;
+    pointer-events: none;
+    z-index: 0;
+    transition: all 0.5s linear;
+
+    @include max-width(1599px) {
+      width: 214px;
+      height: 214px;
+      top: 250px;
+    }
+
+    @include max-width($xl-max) {
+      width: 214px;
+      height: 214px;
+      top: 100px;
+    }
+
+    @include max-width($md-max) {
+      top: 183px;
+    }
+
+    &.second-stage {
+      top: 224px;
+      left: -25px;
+
+      @include max-width($xl-max) {
+        top: 115px;
+      }
+    }
+
+    &.third-stage {
+      top: 265px;
+      left: -50px;
+
+      @include max-width($xl-max) {
+        top: 135px;
+      }
+    }
+  }
+
+  .hero__decor--second {
+    position: absolute;
+    top: 320px;
+    right: 53px;
+    pointer-events: none;
+    z-index: 0;
+    transition: all 0.5s linear;
+
+    @include max-width($xl-max) {
+      width: 67px;
+      height: 66px;
+      top: 240px;
+    }
+
+    @include max-width($md-max) {
+      top: 150px;
+      right: 20px;
+    }
+
+    &.second-stage {
+      top: 240px;
+      right: 83px;
+
+      @include max-width($xl-max) {
+        top: 114px;
+        right: 44px;
+      }
+    }
+
+    &.third-stage {
+      top: 480px;
+      right: 23px;
+
+      @include max-width($xl-max) {
+        top: 154px;
+      }
+    }
+  }
+
+  .hero__decor--third {
+    position: absolute;
+    top: 495px;
+    right: 157px;
+    pointer-events: none;
+    z-index: 0;
+    transition: all 0.5s linear;
+
+    @include max-width($xl-max) {
+      width: 157px;
+      height: 156px;
+      top: 300px;
+    }
+
+    @include max-width($md-max) {
+      top: 250px;
+      right: -35px;
+    }
+
+    &.second-stage {
+      top: 525px;
+      right: 217px;
+
+      @include max-width(1599px) {
+        right: 125px;
+      }
+
+      @include max-width($xl-max) {
+        top: 350px;
+        right: 25px;
+      }
+
+      @include max-width($md-max) {
+        top: 260px;
+        right: -35px;
+      }
+    }
+
+    &.third-stage {
+      top: 585px;
+      right: 325px;
+
+      @include max-width(1599px) {
+        top: 570px;
+        right: 150px;
+      }
+
+      @include max-width($xl-max) {
+        top: 275px;
+        right: -75px;
+      }
+    }
+  }
+
+  .hero__decors__wrapper {
+    @include min-width(1921px) {
+      max-width: 1920px;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      overflow: hidden;
+      pointer-events: none;
+    }
+  }
+}

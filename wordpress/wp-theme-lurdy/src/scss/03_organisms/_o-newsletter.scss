@@ -1,0 +1,113 @@
+.section__newsletter {
+  padding: 80px 0;
+
+  @include max-width($xl-max) {
+    padding: 40px 0;
+  }
+
+  @include max-width($md-max) {
+    padding: 32px 0;
+  }
+
+  &.background-grey {
+    background-color: $grey100;
+  }
+
+  &.background-white {
+    background-color: $white;
+  }
+
+  .newsletter__wrapper {
+    border-radius: 24px;
+    background-color: $secondary800;
+
+    @include max-width($md-max) {
+      border-radius: 16px;
+    }
+
+    h2,
+    p {
+      color: $white;
+    }
+
+    h2 {
+      margin-bottom: 8px;
+
+      @include between($md-min, $xl-max) {
+        font-size: 32px;
+        line-height: 40px;
+      }
+    }
+
+    .input-group {
+      width: 350px;
+
+      @include max-width($xl-max) {
+        width: 100%;
+      }
+
+      input {
+        color: $white;
+        background-color: transparent;
+
+        &:not(:focus) {
+          border: 2px solid $white;
+        }
+      }
+    }
+
+    .input-group--checkbox {
+      margin-top: 16px;
+      min-height: 24px;
+      position: relative;
+
+      a {
+        color: $secondary300;
+        text-decoration: none;
+      }
+
+      p {
+        line-height: 24px;
+      }
+
+      .checkmark {
+        border: 2px solid $white;
+        background-color: transparent;
+      }
+    }
+  }
+
+  .extra_gdpr_text {
+    > * {
+      font-size: 12px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 16px;
+      margin-top: 8px;
+    }
+
+    a {
+      color: $secondary300;
+      text-decoration: none;
+    }
+  }
+
+  .button__wrapper {
+    position: relative;
+    min-height: 60px;
+    margin-top: 16px;
+    max-width: 180px;
+
+    @include max-width($md-max){
+      max-width: initial;
+    }
+
+    .loader {
+      position: absolute;
+      top: 0;
+      display: none;
+      transform: translateX(-50%);
+      margin: 40px auto 20px 50%;
+    }
+  }
+}
