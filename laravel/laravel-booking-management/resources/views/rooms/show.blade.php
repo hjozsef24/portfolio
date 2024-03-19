@@ -11,7 +11,7 @@
                         <p>Price: ${{ $room->price }}</p>
 
                         @if (Auth::check())
-                           <a href="#" class="btn btn-primary">Book this room</a>
+                           <a href="{{ route('booking.show', [$room->room_number]) }}" class="btn btn-primary">Book this room</a>
                         @else
                             <a  class="btn btn-outline-primary" href="{{ route('login') }}">Please login to book this room</a>
                         @endif

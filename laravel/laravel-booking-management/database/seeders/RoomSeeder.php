@@ -19,6 +19,7 @@ class RoomSeeder extends Seeder
             'room_type' => 'Capsule',
             'description' => 'A small room for one person only.',
             'price' => 50.00,
+            'image_path' => 'images/rooms/capsule.jpeg'
         ]);
 
         Room::create([
@@ -26,6 +27,7 @@ class RoomSeeder extends Seeder
             'room_type' => 'Standard',
             'description' => 'A comfortable standard room with essential amenities.',
             'price' => 100.00,
+            'image_path' => 'images/rooms/standard.jpg'
         ]);
 
         Room::create([
@@ -33,6 +35,7 @@ class RoomSeeder extends Seeder
             'room_type' => 'Deluxe',
             'description' => 'A spacious deluxe room with additional features.',
             'price' => 150.00,
+            'image_path' => 'images/rooms/deluxe.jpg'
         ]); 
 
     }
